@@ -1,0 +1,225 @@
+.header {
+  height: 100vh;
+  display: flex;
+  position: relative;
+  background: linear-gradient(
+    128deg,
+    rgba(225, 188, 235, 1) 9%,
+    rgba(163, 205, 232, 0.9669117647058824) 25%,
+    rgba(214, 232, 244, 0) 48%,
+    rgba(235, 235, 235, 0.06495098039215685) 89%
+  );
+
+  &_left {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+
+    &_container {
+      width: 70%;
+      height: 55%;
+      padding-top: 6rem;
+      margin-left: 17rem;
+
+      &_header {
+        font-size: large;
+        font-weight: 600;
+        margin-bottom: 3rem;
+      }
+
+      &_subheader {
+        font-size: large;
+        font-weight: 500;
+        margin-bottom: 2rem;
+      }
+      &_content {
+        word-spacing: 0.5rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+        width: 90%;
+        position: relative;
+        top: 1rem;
+      }
+    }
+
+    &_buttons {
+      width: 50%;
+      height: 4rem;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      column-gap: 6rem;
+      position: relative;
+      bottom: 2rem;
+
+      &_contact {
+        border-radius: 2rem;
+        background-color: var(--button-bg-color);
+        color: white;
+        width: 12rem;
+        height: 100%;
+        font-size: 1.2rem;
+        font-weight: 900;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none;
+
+        & svg {
+          font-size: 1.2rem;
+          margin-left: 0.5rem;
+        }
+      }
+
+      &_cv {
+        border-radius: 2rem;
+        background-color: var(--button-bg-color);
+        color: white;
+        width: 12rem;
+        height: 100%;
+        font-size: 1.2rem;
+        font-weight: 900;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none;
+
+        & svg {
+          font-size: 1.2rem;
+          margin-left: 0.5rem;
+        }
+      }
+    }
+  }
+
+  &_right {
+    position: relative;
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    &_image {
+      position: relative;
+      left: 2rem;
+      width: 33.5rem;
+      height: 39.6rem;
+      -webkit-user-select: none; /* Safari */
+      -ms-user-select: none; /* IE 10 and IE 11 */
+      user-select: none;
+
+      & img {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+        filter: drop-shadow(2px 2px 3px var(--shadow))
+          drop-shadow(-3px 0 10px var(--shadow));
+        animation: blob 3s ease-in-out infinite;
+
+        @keyframes blob {
+          0% {
+            border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+          }
+          50% {
+            border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+          }
+          100% {
+            border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+          }
+        }
+      }
+    }
+  }
+
+  .myname {
+    font-size: xx-large;
+    font-weight: 900;
+  }
+
+  .myrole {
+    font-size: x-large;
+    font-weight: 600;
+  }
+
+  .social_media {
+    position: absolute;
+    top: 40%;
+    left: 2rem;
+    width: 4rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+    list-style: none;
+
+    &_facebook,
+    &_linkedin,
+    &_github {
+      font-size: 2.3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-basis: 3rem;
+      flex-grow: 1;
+      scale: (1.2);
+      transition: all 0.3s linear;
+    }
+
+    &_facebook:hover {
+      scale: (1.6);
+      color: rgba(35, 35, 229, 0.818);
+    }
+
+    &_linkedin:hover {
+      scale: (1.6);
+      color: rgba(9, 9, 230, 0.818);
+    }
+
+    &_github:hover {
+      scale: (1.6);
+      color: rgba(12, 12, 12, 0.815);
+    }
+  }
+}
+
+.scolldown {
+  font-size: 3rem;
+  position: absolute;
+  cursor: none;
+  bottom: 3rem;
+  left: -20rem;
+  animation: scrolldown 5s ease-in-out infinite;
+
+  &::before {
+    content: "Scroll down";
+    position: absolute;
+    font-size: 1rem;
+    top: -3rem;
+    font-weight: 800;
+  }
+
+  @keyframes scrolldown {
+    0% {
+      opacity: 1;
+    }
+    30% {
+      opacity: 0.3;
+    }
+    50% {
+      opacity: 0.5;
+      bottom: 1rem;
+    }
+    70% {
+      opacity: 0.8;
+    }
+  }
+}

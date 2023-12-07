@@ -1,0 +1,23 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --main-bg-color: brown;
+  --button-bg-color: rgb(61, 59, 59);
+  --shadow: #808080;
+  --shadow2: rgba(0, 0, 0, 0.2);
+}
+
+html {
+  font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+}
+
+body {
+  background: #fff;
+}
