@@ -7,18 +7,20 @@ import { MdOutlineAssignment } from "react-icons/md";
 import { MdMailOutline } from "react-icons/md";
 import { GiStarsStack } from "react-icons/gi";
 import { navAnimation } from "../animtionVariants/navAnimation";
+import { Link } from "react-scroll";
 
 // import "../styles/main.scss";
 let tabs = [
-  { id: "home", label: "Home" },
-  { id: "about", label: "About" },
-  { id: "experince", label: "Experince" },
-  { id: "project", label: "Project" },
-  { id: "contact", label: "Contact" },
+  { id: "home", label: "Home", key: 1 },
+  { id: "about", label: "About", key: 2 },
+  { id: "experince", label: "Experince", key: 3 },
+  { id: "project", label: "Project", key: 4 },
+  { id: "contact", label: "Contact", key: 5 },
 ];
 
 export default function Navbar() {
   let [activeTab, setActiveTab] = useState("home");
+
   return (
     <div className="nav">
       {/* <div className="nav_logo">logo</div> */}
@@ -32,32 +34,39 @@ export default function Navbar() {
                 animate="animate"
                 custom={ind}
                 key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
-                className={`nav_links_home_${tab.label}`}
+                className={`nav_links_home_${tab.key}`}
               >
-                {tab.id === "home" && <FaHome />}
-                {tab.id === "about" && <MdContactPage />}
-                {tab.id === "skill" && <RiSwordFill />}
-                {tab.id === "experince" && <GiStarsStack />}
-                {tab.id === "project" && <MdOutlineAssignment />}
-                {tab.id === "contact" && <MdMailOutline />}
+                <Link
+                  activeClass="nav_active"
+                  to={tab.id}
+                  spy={true}
+                  smooth={true}
+                  // offset={8}
+                  duration={500}
+                  onClick={() => setActiveTab(tab.id)}
+                  onSetActive={() => {
+                    setActiveTab(tab.id);
+                  }}
+                >
+                  {tab.id === "home" && <FaHome />}
+                  {tab.id === "about" && <MdContactPage />}
+                  {tab.id === "skill" && <RiSwordFill />}
+                  {tab.id === "experince" && <GiStarsStack />}
+                  {tab.id === "project" && <MdOutlineAssignment />}
+                  {tab.id === "contact" && <MdMailOutline />}
+
+                  {tab.label}
+                </Link>
                 {activeTab === tab.id && (
                   <motion.span
                     layoutId="bubble"
                     className="nav_pill"
-                    transition={{ type: "spring" }}
+                    transition={{ type: "spring", stiffness: 50 }}
                   />
                 )}
-
-                {tab.label}
               </motion.li>
             );
           })}
-
-          {/* <li className="nav_link_home"> Home</li>
-          <li className="nav_link_about">About</li>
-          <li className="nav_link_skill">About</li>
-          <li className="nav_link_contact">Contact</li> */}
         </ul>
       </div>
     </div>

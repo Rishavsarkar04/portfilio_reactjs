@@ -1,0 +1,36 @@
+@mixin gridskills {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 4rem;
+  row-gap: 2rem;
+  font-size: 1.5rem;
+  // background-color: rgb(231, 225, 225);
+}
+
+@mixin skillsheader {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 2.5rem;
+}
+
+@mixin skill_container {
+  // background: linear-gradient(
+  //   62deg,
+  //   rgba(219, 216, 221, 0.6391806722689075) 9%,
+  //   rgba(250, 250, 250, 0.31985294117647056) 53%,
+  //   rgba(238, 238, 238, 0.14898459383753504) 100%
+  // );
+  filter: opacity(20px);
+  position: relative;
+  top: 2rem;
+  background-color: aliceblue;
+  min-height: 65%;
+  min-width: 20%;
+  border-radius: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 2.7rem;
+  box-shadow: -1px 1px 8px 0px var(--shadow);
+}

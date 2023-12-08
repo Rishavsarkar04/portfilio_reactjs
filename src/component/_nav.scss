@@ -1,11 +1,11 @@
 .nav {
-  position: absolute;
+  position: fixed;
   top: 1rem;
-  left: 20%;
+  left: 23%;
   z-index: 11;
   height: 5rem;
-  width: 60%;
-  backdrop-filter: blur(100%);
+  width: 55%;
+  backdrop-filter: blur(50px);
   box-shadow: 1px 1px 17px -1px var(--shadow);
   // background-color: white;
   // background: transparent;
@@ -37,29 +37,41 @@
       font-weight: 600;
       column-gap: 6rem;
 
-      & > li {
+      & > li > a {
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
         color: black;
         font-weight: 800;
-        & > svg {
-          margin-right: 1rem;
-        }
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
       }
-      & > li:hover {
+      & > li > a:hover {
         color: rgb(42, 41, 41);
       }
     }
   }
+}
 
-  &_pill {
-    position: absolute;
-    bottom: -5px;
-    border-radius: 20px;
-    height: 20%;
-    width: 130%;
-    background-color: black;
+@for $i from 1 through 5 {
+  .nav_links_home_#{$i} {
+    position: relative;
+    & > a > svg {
+      margin-right: 0.6rem;
+    }
   }
 }
+
+.nav_pill {
+  position: absolute;
+  bottom: -5px;
+  border-radius: 20px;
+  height: 20%;
+  width: 110%;
+  background-color: black;
+}
+
+// .nav_active {
+//   scale: (1.2);
+// }

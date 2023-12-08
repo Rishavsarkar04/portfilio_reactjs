@@ -8,7 +8,13 @@
 }
 
 :root {
-  --main-bg-color: brown;
+  --main-bg-color: linear-gradient(
+    128deg,
+    rgba(225, 188, 235, 1) 9%,
+    rgba(163, 205, 232, 0.9669117647058824) 25%,
+    rgba(214, 232, 244, 0) 48%,
+    rgba(235, 235, 235, 0.06495098039215685) 89%
+  );
   --button-bg-color: rgb(61, 59, 59);
   --shadow: #808080;
   --shadow2: rgba(0, 0, 0, 0.2);

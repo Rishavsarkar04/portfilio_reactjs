@@ -1,4 +1,4 @@
-import { easeInOut } from "framer-motion";
+// import { easeInOut } from "framer-motion";
 
 export const navAnimation = {
   initial: {

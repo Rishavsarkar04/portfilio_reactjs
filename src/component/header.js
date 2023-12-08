@@ -6,6 +6,7 @@ import { FaFileAlt } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 import { CgScrollV } from "react-icons/cg";
 import { motion } from "framer-motion";
+import { Element } from "react-scroll";
 import {
   picAnimation,
   socialMediaAnimation,
@@ -15,7 +16,7 @@ import {
 
 export default function Header() {
   return (
-    <section className="header">
+    <Element className="header" name="home">
       <div className="header_left">
         <div className="header_left_container">
           <motion.div
@@ -122,6 +123,6 @@ export default function Header() {
           <CgScrollV />
         </div>
       </div>
-    </section>
+    </Element>
   );
 }
