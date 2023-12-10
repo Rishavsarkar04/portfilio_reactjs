@@ -3,6 +3,8 @@ import { VerticalTimeline } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import TimelineElement from "../ui/vertical_element";
 import { SiMicrosoftacademic } from "react-icons/si";
+import { HiOutlineAcademicCap } from "react-icons/hi";
+import { PiSuitcaseSimpleBold } from "react-icons/pi";
 import { useState } from "react";
 
 const dict = {
@@ -41,7 +43,7 @@ const dict = {
   job: [],
 };
 
-const highlight = { scale: "1.3", border: " 1px solid black" };
+const highlight = { scale: "1.1", border: " 1px solid black" };
 
 export default function Experience() {
   const [state, setstate] = useState("education");
@@ -56,6 +58,7 @@ export default function Experience() {
             setstate("education");
           }}
         >
+          <HiOutlineAcademicCap />
           Education
         </div>
         <div
@@ -65,7 +68,7 @@ export default function Experience() {
             setstate("job");
           }}
         >
-          Job Experience
+          <PiSuitcaseSimpleBold /> Job Experience
         </div>
       </div>
       <div className="experience_timeline">
