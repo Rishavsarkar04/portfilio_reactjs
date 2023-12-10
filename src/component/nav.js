@@ -13,7 +13,7 @@ import { Link } from "react-scroll";
 let tabs = [
   { id: "home", label: "Home", key: 1 },
   { id: "about", label: "About", key: 2 },
-  { id: "experince", label: "Experince", key: 3 },
+  { id: "experience", label: "Experience", key: 3 },
   { id: "project", label: "Project", key: 4 },
   { id: "contact", label: "Contact", key: 5 },
 ];
@@ -41,7 +41,7 @@ export default function Navbar() {
                   to={tab.id}
                   spy={true}
                   smooth={true}
-                  // offset={8}
+                  // offset={-10}
                   duration={500}
                   onClick={() => setActiveTab(tab.id)}
                   onSetActive={() => {
@@ -51,7 +51,7 @@ export default function Navbar() {
                   {tab.id === "home" && <FaHome />}
                   {tab.id === "about" && <MdContactPage />}
                   {tab.id === "skill" && <RiSwordFill />}
-                  {tab.id === "experince" && <GiStarsStack />}
+                  {tab.id === "experience" && <GiStarsStack />}
                   {tab.id === "project" && <MdOutlineAssignment />}
                   {tab.id === "contact" && <MdMailOutline />}
 

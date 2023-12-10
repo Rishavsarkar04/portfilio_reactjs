@@ -41,7 +41,7 @@ export const buttonsAnimation = {
     transition: {
       duration: 1,
       ease: easeInOut,
-      delay: 4,
+      delay: 3,
     },
   },
   cvInitial: {
@@ -54,7 +54,7 @@ export const buttonsAnimation = {
     transition: {
       duration: 1,
       ease: easeInOut,
-      delay: 4,
+      delay: 3,
     },
   },
 

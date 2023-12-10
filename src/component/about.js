@@ -5,6 +5,7 @@ import { FaReact } from "react-icons/fa6";
 import { TbBrandRedux } from "react-icons/tb";
 import { SiReactquery } from "react-icons/si";
 import { FaHtml5 } from "react-icons/fa6";
+import { FaSass } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { FaNodeJs } from "react-icons/fa6";
 import { SiFlask } from "react-icons/si";
@@ -22,6 +23,7 @@ const frontendlist = [
   { id: "reactquery", label: "React qurey", icon: <SiReactquery /> },
   { id: "html", label: "Html", icon: <FaHtml5 /> },
   { id: "css", label: "Css", icon: <FaCss3Alt /> },
+  { id: "sass", label: "Sass", icon: <FaSass /> },
 ];
 const backendlist = [
   { id: "django", label: "Django", icon: <SiDjango /> },
@@ -61,27 +63,29 @@ export default function About() {
           initial="initial"
           whileInView="animate"
           custom={0}
+          viewport={{ once: true }}
           className="container_header"
         >
-          About
+          About Me
         </motion.div>
         <motion.div
           variants={headerAnimate}
           initial="initial"
           whileInView="animate"
           custom={0.2}
+          viewport={{ once: true }}
           className="container_content"
         >
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum debitis
-          voluptatem ipsum explicabo? In animi enim nisi veniam sint quaerat
-          distinctio harum corporis accusamus delectus obcaecati natus, quae
-          velit magnam quisquam eos officia consequuntur deleniti eaque laborum
-          temporibus fuga! Dolore aliquid facilis aut laudantium id veniam
-          reprehenderit ipsum similique. Sequi soluta deleniti est fugiat, unde
-          quia voluptatum quaerat porro minus! Lorem, ipsum dolor sit amet
-          consectetur adipisicing elit. Eum debitis voluptatem ipsum explicabo?
-          In animi enim nisi veniam sint quaerat distinctio harum corporis
-          accusamus delectus obcaecati natus, quae velit magnam quisquam eos
+          I'm a Passionate <b>Full Stack Developer </b>based in Kolkata,
+          Westbengal. with expertise in <b>front-end</b> and{" "}
+          <b>back-end technologies</b>. Proficient in creating robust, scalable
+          web applications. Experienced in working with diverse tech stacks,
+          including <b>JavaScript, React, Node.js, Python, Django, Flask </b>
+          and more. Committed to delivering innovative solutions and staying
+          updated with the latest industry trends. with the knowledge. I'm open
+          to Job opportunities where I can contribute, learn and grow. If you
+          have a good opportunity that matches my skills and experience then
+          don't hesitate to contact me. <b>Let's build the future together!.</b>
         </motion.div>
       </div>
       <div className="skill">
@@ -89,6 +93,7 @@ export default function About() {
           variants={headerAnimate}
           initial="initial"
           whileInView="animate"
+          viewport={{ once: true }}
           className="skill_header"
           custom={0.4}
         >
@@ -98,6 +103,7 @@ export default function About() {
           className="skill_lang"
           variants={boxAnimate}
           initial="initialRight"
+          viewport={{ once: true }}
           whileInView="animateRightLeft"
         >
           <div className="skill_lang_header">Languages</div>
@@ -126,6 +132,7 @@ export default function About() {
           variants={boxAnimate}
           initial="initialDown"
           whileInView="animateDown"
+          viewport={{ once: true }}
           className="skill_front"
         >
           <div className="skill_front_header">Frontend Skills</div>
@@ -144,10 +151,11 @@ export default function About() {
             <div className="skill_front_lists....."></div>
           </div>
         </motion.div>
-        <motion.iv
+        <motion.div
           variants={boxAnimate}
           initial="initialLeft"
           whileInView="animateRightLeft"
+          viewport={{ once: true }}
           className="skill_back"
         >
           <div className="skill_back_header">Backend Skills</div>
@@ -164,7 +172,7 @@ export default function About() {
               );
             })}
           </div>
-        </motion.iv>
+        </motion.div>
       </div>
     </Element>
   );

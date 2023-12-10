@@ -20,10 +20,10 @@ export const boxAnimate = {
     x: "-5rem",
   },
   initialLeft: {
-    x: "10rem",
+    x: "5rem",
   },
   initialDown: {
-    y: "5rem",
+    y: "4rem",
   },
   animateRightLeft: {
     x: 0,

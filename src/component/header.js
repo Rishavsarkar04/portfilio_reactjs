@@ -16,7 +16,11 @@ import {
 
 export default function Header() {
   return (
-    <Element className="header" name="home">
+    <Element
+      className="header"
+      name="home"
+      style={{ background: " var(--main-bg-color)" }}
+    >
       <div className="header_left">
         <div className="header_left_container">
           <motion.div
@@ -62,11 +66,9 @@ export default function Header() {
             custom={2}
             className="header_left_container_content"
           >
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius,
-            voluptates.Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Eius, voluptates.Lorem ipsum dolor sit amet consectetur, adipisicing
-            elit. Eius, voluptates.Lorem ipsum dolor sit amet consectetur,
-            adipisicing elit. Eius, voluptates.
+            "Versatile full-stack developer proficient in front-end and back-end
+            technologies, with a passion for creating seamless, innovative
+            applications and solutions."
           </motion.div>
         </div>
 

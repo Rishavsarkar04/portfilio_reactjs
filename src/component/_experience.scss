@@ -1,0 +1,48 @@
+.experience {
+  min-height: 100vh;
+  display: flex;
+  justify-content: fle;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 2rem;
+
+  &_header {
+    font-size: 5rem;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    margin-top: 8rem;
+  }
+  &_tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 7rem;
+    margin-top: 4rem;
+    margin-left: 4rem;
+
+    & > div {
+      font-size: 2rem;
+      font-weight: 600;
+      border-radius: 10px;
+
+      padding: 0.5rem;
+      cursor: pointer;
+      transition: all 0.5 linear;
+    }
+  }
+
+  &_timeline {
+    width: 80%;
+    padding: 2rem;
+    // background-color: rgba(246, 242, 242, 0.91);
+  }
+
+  .vertical-timeline-element-content .vertical-timeline-element-date {
+    font-size: 1rem;
+    font-weight: 800;
+  }
+  .vertical-timeline-element {
+    position: relative;
+  }
+}
