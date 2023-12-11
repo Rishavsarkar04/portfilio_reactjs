@@ -1,42 +1,9 @@
 import { motion } from "framer-motion";
-import { SiDjango } from "react-icons/si";
-import { IoLogoJavascript } from "react-icons/io5";
-import { FaReact } from "react-icons/fa6";
-import { TbBrandRedux } from "react-icons/tb";
-import { SiReactquery } from "react-icons/si";
-import { FaHtml5 } from "react-icons/fa6";
-import { FaSass } from "react-icons/fa";
-import { FaCss3Alt } from "react-icons/fa";
-import { FaNodeJs } from "react-icons/fa6";
-import { SiFlask } from "react-icons/si";
-import { TbBrandMysql } from "react-icons/tb";
-import { SiMongodb } from "react-icons/si";
-import { FaPython } from "react-icons/fa";
-import { SiExpress } from "react-icons/si";
 import { boxAnimate } from "../animtionVariants/aboutAnimation";
 import { headerAnimate } from "../animtionVariants/aboutAnimation";
 import { Element } from "react-scroll";
 
-const frontendlist = [
-  { id: "react", label: "React", icon: <FaReact /> },
-  { id: "redux", label: "Redux", icon: <TbBrandRedux /> },
-  { id: "reactquery", label: "React qurey", icon: <SiReactquery /> },
-  { id: "html", label: "Html", icon: <FaHtml5 /> },
-  { id: "css", label: "Css", icon: <FaCss3Alt /> },
-  { id: "sass", label: "Sass", icon: <FaSass /> },
-];
-const backendlist = [
-  { id: "django", label: "Django", icon: <SiDjango /> },
-  { id: "nodejs", label: "Node js", icon: <FaNodeJs /> },
-  { id: "express", label: "Express js", icon: <SiExpress /> },
-  { id: "flask", label: "Flask", icon: <SiFlask /> },
-  { id: "mysql", label: "Mysql", icon: <TbBrandMysql /> },
-  { id: "mongoDb", label: "MongoDb", icon: <SiMongodb /> },
-];
-const langlist = [
-  { id: "python", label: "Python", icon: <FaPython /> },
-  { id: "javascript", label: "Javascript", icon: <IoLogoJavascript /> },
-];
+import { frontendlist, backendlist, langlist } from "../data/data";
 
 const div_container = {
   display: "flex",
@@ -76,11 +43,11 @@ export default function About() {
           viewport={{ once: true }}
           className="container_content"
         >
-          I'm a Passionate <b>Full Stack Developer </b>based in Kolkata,
-          Westbengal. with expertise in <b>front-end</b> and{" "}
-          <b>back-end technologies</b>. Proficient in creating robust, scalable
-          web applications. Experienced in working with diverse tech stacks,
-          including <b>JavaScript, React, Node.js, Python, Django, Flask </b>
+          Hello, I'm a Passionate <b>Full Stack Developer </b>based in Kolkata.
+          with expertise in <b>front-end</b> and <b>back-end technologies</b>.
+          Proficient in creating robust, scalable web applications. Experienced
+          in working with diverse tech stacks, including{" "}
+          <b>JavaScript, React, Node.js, Python, Django, Flask </b>
           and more. Committed to delivering innovative solutions and staying
           updated with the latest industry trends. with the knowledge. I'm open
           to Job opportunities where I can contribute, learn and grow. If you
@@ -113,6 +80,7 @@ export default function About() {
                 <div
                   className={`skill_lang_lists_${ind}`}
                   style={div_container}
+                  key={obj.id}
                 >
                   <span
                     style={{
@@ -142,6 +110,7 @@ export default function About() {
                 <div
                   className={`skill_front_lists_${ind}`}
                   style={div_container}
+                  key={obj.id}
                 >
                   <span style={icon_span}>{obj.icon}</span>
                   <span style={label_span}>{obj.label}</span>
@@ -165,6 +134,7 @@ export default function About() {
                 <div
                   className={`skill_back_lists_${ind}`}
                   style={div_container}
+                  key={obj.id}
                 >
                   <span style={icon_span}>{obj.icon}</span>
                   <span style={label_span}>{obj.label}</span>

@@ -16,11 +16,7 @@ import {
 
 export default function Header() {
   return (
-    <Element
-      className="header"
-      name="home"
-      style={{ background: " var(--main-bg-color)" }}
-    >
+    <Element className="header" name="home">
       <div className="header_left">
         <div className="header_left_container">
           <motion.div

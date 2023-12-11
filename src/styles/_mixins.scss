@@ -34,3 +34,13 @@
   row-gap: 2.7rem;
   box-shadow: -1px 1px 8px 0px var(--shadow);
 }
+
+@mixin section_header {
+  font-size: 5rem;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  margin-top: 8rem;
+  -webkit-text-stroke: 2px black;
+  color: var(--name-color);
+}

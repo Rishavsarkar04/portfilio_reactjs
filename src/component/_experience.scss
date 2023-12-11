@@ -1,3 +1,5 @@
+@use "../styles/mixins" as ex;
+
 .experience {
   min-height: 100vh;
   display: flex;
@@ -5,13 +7,10 @@
   align-items: center;
   flex-direction: column;
   row-gap: 2rem;
+  position: relative;
 
   &_header {
-    font-size: 5rem;
-    font-weight: bold;
-    width: 100%;
-    text-align: center;
-    margin-top: 8rem;
+    @include ex.section_header;
   }
   &_tab {
     display: flex;
@@ -30,7 +29,7 @@
       column-gap: 0.5rem;
       padding: 0.5rem;
       cursor: pointer;
-      transition: all 0.5 linear;
+      transition: all 0.1s linear;
     }
   }
 

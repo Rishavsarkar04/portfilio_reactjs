@@ -3,3 +3,19 @@
 @forward "../component/header.scss";
 @forward "../component/about.scss";
 @forward "../component/experience.scss";
+@forward "../component/project.scss";
+
+.header::after,
+.about::after,
+.experience::after {
+  content: "";
+  position: absolute;
+  height: 0.2rem;
+  width: 100%;
+  background: linear-gradient(
+    81deg,
+    rgba(83, 86, 89, 0.8156512605042017) 7%,
+    rgba(238, 238, 238, 0.14898459383753504) 47%
+  );
+  bottom: 0;
+}

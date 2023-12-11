@@ -15,10 +15,18 @@
     rgba(214, 232, 244, 0) 48%,
     rgba(235, 235, 235, 0.06495098039215685) 89%
   );
+  --secondary-bg-color: linear-gradient(
+    90deg,
+    rgba(104, 193, 245, 0.6111694677871149) 3%,
+    rgba(104, 193, 245, 0.6111694677871149) 15%,
+
+    rgba(238, 238, 238, 0.14898459383753504) 95%
+  );
   --button-bg-color: rgb(61, 59, 59);
   --shadow: #808080;
   --shadow2: rgba(0, 0, 0, 0.2);
   --name-color: aliceblue;
+  --role-color: rgb(74, 142, 232);
 }
 
 html {
