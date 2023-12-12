@@ -75,7 +75,7 @@ export const project = [
   {
     id: 1,
     name: "Ecomerce Site",
-    techs: ["Python", "Django", "mMsql", "Javascript", "Html", "Css"],
+    techs: ["Python", "Django", "Msql", "Javascript", "Html", "Css"],
     desc: "",
     site_url: "",
     github_url: "",
