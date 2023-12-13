@@ -1,5 +1,5 @@
 import Lottie from "lottie-react";
-import mailAnimation from "../animationlottiefiles/mailAnimation.json";
+import mailAnimation from "../animationloffiees/mailAnimation.json";
 import { Element } from "react-scroll";
 import { headerAnimate } from "../animtionVariants/aboutAnimation";
 import { motion } from "framer-motion";
