@@ -1,0 +1,104 @@
+@use "../styles/mixins" as ct;
+
+.contact {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 4rem;
+
+  &_header {
+    @include ct.section_header;
+  }
+
+  &_form {
+    width: 140rem;
+    height: 50rem;
+    display: flex;
+    column-gap: 3rem;
+    justify-content: center;
+    align-items: center;
+
+    &_animation {
+      height: 50rem;
+      width: 50rem;
+      display: flex;
+      // flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      left: 5rem;
+    }
+
+    &_container {
+      background-color: aliceblue;
+      border: 2px solid black;
+      border-radius: 2rem;
+
+      & > form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 3rem;
+        height: 50rem;
+        width: 50rem;
+        padding: 3rem 0;
+
+        & > .form_header {
+          font-size: 3rem;
+          font-weight: bold;
+          font-style: italic;
+        }
+
+        & > .name {
+          @include ct.input;
+        }
+        & > .email {
+          @include ct.input;
+        }
+        & > .subject {
+          @include ct.input;
+        }
+
+        & > .message {
+          height: 15rem;
+          width: 60%;
+          //   border-radius: 10px;
+
+          & > textarea {
+            height: 100%;
+            width: 100%;
+            border-radius: 10px;
+            border: 2px solid black;
+            outline: none;
+            resize: none;
+            font-size: 1.5rem;
+            font-weight: 500;
+            padding-left: 2rem;
+            padding-top: 2rem;
+          }
+        }
+        & > button {
+          border-radius: 2rem;
+          background-color: var(--button-bg-color);
+          color: white;
+          width: 12rem;
+          height: 4rem;
+          font-size: 1.2rem;
+          font-weight: 900;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          column-gap: 0.8rem;
+          cursor: pointer;
+          -webkit-user-select: none; /* Safari */
+          -ms-user-select: none; /* IE 10 and IE 11 */
+          user-select: none;
+        }
+      }
+    }
+  }
+}

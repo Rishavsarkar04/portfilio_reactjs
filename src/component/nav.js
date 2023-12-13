@@ -8,15 +8,7 @@ import { MdMailOutline } from "react-icons/md";
 import { GiStarsStack } from "react-icons/gi";
 import { navAnimation } from "../animtionVariants/navAnimation";
 import { Link } from "react-scroll";
-
-// import "../styles/main.scss";
-let tabs = [
-  { id: "home", label: "Home", key: 1 },
-  { id: "about", label: "About", key: 2 },
-  { id: "experience", label: "Experience", key: 3 },
-  { id: "project", label: "Project", key: 4 },
-  { id: "contact", label: "Contact", key: 5 },
-];
+import { tabs } from "../data/data";
 
 export default function Navbar() {
   let [activeTab, setActiveTab] = useState("home");

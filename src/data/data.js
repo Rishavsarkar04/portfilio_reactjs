@@ -14,6 +14,13 @@ import { FaPython } from "react-icons/fa";
 import { SiExpress } from "react-icons/si";
 import { SiMicrosoftacademic } from "react-icons/si";
 
+export const tabs = [
+  { id: "home", label: "Home", key: 1 },
+  { id: "about", label: "About", key: 2 },
+  { id: "experience", label: "Experience", key: 3 },
+  { id: "project", label: "Project", key: 4 },
+  { id: "contact", label: "Contact", key: 5 },
+];
 export const frontendlist = [
   { id: "react", label: "React", icon: <FaReact /> },
   { id: "redux", label: "Redux", icon: <TbBrandRedux /> },

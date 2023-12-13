@@ -1,4 +1,5 @@
 import { project } from "../data/data";
+import { Element } from "react-scroll";
 import { MdArrowOutward } from "react-icons/md";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { headerAnimate } from "../animtionVariants/aboutAnimation";
@@ -16,12 +17,12 @@ export default function Project() {
     // Map x from these values:
     [0, 1],
     // Into these values:
-    [0.8, 1]
+    [0.9, 1]
   );
 
   // console.log(scrollY);
   return (
-    <section className="project" ref={ref}>
+    <Element className="project">
       <motion.div
         variants={headerAnimate}
         initial="initial"
@@ -32,7 +33,7 @@ export default function Project() {
       >
         My Projects
       </motion.div>
-      <div className="project_container">
+      <div className="project_container" ref={ref}>
         {project.map((proj) => {
           return (
             <motion.div
@@ -67,6 +68,6 @@ export default function Project() {
           );
         })}
       </div>
-    </section>
+    </Element>
   );
 }
