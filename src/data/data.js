@@ -78,7 +78,7 @@ export const dict = {
   job: [],
 };
 
-export const project = [
+export const projects = [
   {
     id: 1,
     name: "Ecomerce Site",

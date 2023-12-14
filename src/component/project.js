@@ -1,12 +1,19 @@
-import { project } from "../data/data";
+import { projects } from "../data/data";
 import { Element } from "react-scroll";
-import { MdArrowOutward } from "react-icons/md";
+
 import { motion, useScroll, useTransform } from "framer-motion";
 import { headerAnimate } from "../animtionVariants/aboutAnimation";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import { buttonsAnimation } from "../animtionVariants/headerAnimation";
+import Projectcard from "../ui/projectCard";
 
 export default function Project() {
   const ref = useRef(null);
+  const [Limit, setLimit] = useState(8);
+  const len = projects.length;
+  // console.log(len);
+  const project = projects.slice(0, Limit);
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["0 1", "1.3 1"],
@@ -33,41 +40,29 @@ export default function Project() {
       >
         My Projects
       </motion.div>
-      <div className="project_container" ref={ref}>
+      <div
+        className="project_container"
+        ref={ref}
+        style={{ marginBottom: len < Limit ? "4rem" : "" }}
+      >
         {project.map((proj) => {
-          return (
-            <motion.div
-              style={{ scale: scale }}
-              className="project_card"
-              key={proj.id}
-            >
-              <img src="/img/img1.jpg" alt="/img/img1.jpg"></img>
-              <div className="project_card_container">
-                <div className="project_card_container_header">{proj.name}</div>
-                <div className="project_card_container_desc">{proj.desc}</div>
-
-                <ul className="project_card_container_techs">
-                  {proj.techs.map((tech, ind) => {
-                    return (
-                      <li className="tect_list" key={ind}>
-                        {tech}
-                      </li>
-                    );
-                  })}
-                </ul>
-                <div className="buttons">
-                  <button className="project_links">
-                    Visit Site <MdArrowOutward />
-                  </button>
-                  <button className="github_link">
-                    Github <MdArrowOutward />
-                  </button>
-                </div>
-              </div>
-            </motion.div>
-          );
+          return <Projectcard proj={proj} scale={scale} key={proj.id} />;
         })}
       </div>
+      {len > Limit && (
+        <motion.div
+          variants={buttonsAnimation}
+          whileHover="hover"
+          className="project_loadmore"
+          onClick={() => {
+            setLimit((prev) => {
+              return prev + 4;
+            });
+          }}
+        >
+          Load More
+        </motion.div>
+      )}
     </Element>
   );
 }

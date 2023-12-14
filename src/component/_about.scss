@@ -1,7 +1,7 @@
 @use "../styles/mixins" as ab;
 
 .about {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   // background:
@@ -24,16 +24,29 @@
     align-self: center;
     // background-color: rgb(252, 249, 249);
     background-color: transparent;
-    width: 70%;
-    font-size: 1.5rem;
-    line-height: 1.8;
-    // word-spacing: 0.3rem;
-    padding: 2rem 8rem 2rem 8rem;
-    margin-bottom: 3rem;
+    width: 80%;
+    // padding: 2rem 8rem 2rem 8rem;
+    margin-bottom: 2rem;
     filter: opacity(20px);
     // border: 0.1rem solid black;
     border-radius: 3rem;
     // box-shadow: 1px 2px 36px -11px var(--shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1rem;
+    & > p {
+      font-size: 1.5rem;
+      line-height: 1.8;
+      padding: 3rem 14rem 3rem;
+    }
+    & > div {
+      position: relative;
+      width: 25rem;
+    }
+    & > div > svg {
+      position: absolute;
+    }
   }
 }
 
@@ -46,6 +59,7 @@
   column-gap: 10rem;
   position: relative;
   margin-bottom: 2rem;
+  height: 35rem;
 
   &_header {
     position: absolute;

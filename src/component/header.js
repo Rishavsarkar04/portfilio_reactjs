@@ -6,7 +6,9 @@ import { FaFileAlt } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 import { CgScrollV } from "react-icons/cg";
 import { motion } from "framer-motion";
-import { Element } from "react-scroll";
+import { Element, Link } from "react-scroll";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import cv from "../cv/cv.pdf";
 import {
   picAnimation,
   socialMediaAnimation,
@@ -77,7 +79,15 @@ export default function Header() {
             whileTap="tap"
             className="header_left_buttons_contact"
           >
-            Contact Me <FaPaperPlane />
+            <Link
+              activeClass="nav_active"
+              to="contact"
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
+              Contact Me <FaPaperPlane />
+            </Link>
           </motion.div>
 
           <motion.div
@@ -88,7 +98,9 @@ export default function Header() {
             whileTap="tap"
             className="header_left_buttons_cv"
           >
-            Download CV <FaFileAlt />
+            <a href={cv} download="Rishav Resume">
+              Download CV <FaFileAlt />
+            </a>
           </motion.div>
         </div>
         <motion.ul
@@ -115,7 +127,12 @@ export default function Header() {
           animate="animate"
           className="header_right_image"
         >
-          <img src="/img/header_img.jpg" alt="default.jpg"></img>
+          <LazyLoadImage
+            alt="default.jpg"
+            effect="blur"
+            src="/img/header_img.jpg"
+          />
+          {/* <img src="/img/header_img.jpg" alt="default.jpg"></img> */}
         </motion.div>
         <div className="scolldown">
           <CgScrollV />

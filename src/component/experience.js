@@ -1,7 +1,7 @@
 import { Element } from "react-scroll";
 import { VerticalTimeline } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import TimelineElement from "../ui/vertical_element";
+import TimelineElement from "../ui/verticalElement";
 import { HiOutlineAcademicCap } from "react-icons/hi";
 import { PiSuitcaseSimpleBold } from "react-icons/pi";
 import { useState } from "react";

@@ -5,6 +5,10 @@ import { headerAnimate } from "../animtionVariants/aboutAnimation";
 import { motion } from "framer-motion";
 import { FaPaperPlane } from "react-icons/fa";
 import { buttonsAnimation } from "../animtionVariants/headerAnimation";
+import {
+  formAnimation,
+  mailimageAnimation,
+} from "../animtionVariants/contactAnimation";
 
 export default function Contact() {
   return (
@@ -20,8 +24,21 @@ export default function Contact() {
         Contact Me
       </motion.div>
       <div className="contact_form">
-        <div className="contact_form_container">
-          <form>
+        <motion.div
+          variants={formAnimation}
+          initial="initialContainer"
+          whileInView="animate"
+          viewport={{ once: true }}
+          custom={0}
+          className="contact_form_container"
+        >
+          <motion.form
+            variants={formAnimation}
+            initial="initialForm"
+            whileInView="animate"
+            viewport={{ once: true }}
+            custom={1}
+          >
             <div className="form_header"> Let's Build Future Together !</div>
             <div className="name">
               <input type="text" placeholder="Enter Your Name" />
@@ -49,11 +66,14 @@ export default function Contact() {
               Send
               <FaPaperPlane />
             </motion.button>
-          </form>
-        </div>
-        <div
+          </motion.form>
+        </motion.div>
+        <motion.div
+          variants={mailimageAnimation}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
           className="contact_form_animation"
-          //   style={{ border: "2px solid green" }}
         >
           <Lottie
             animationData={mailAnimation}
@@ -63,8 +83,13 @@ export default function Contact() {
             }}
             loop={true}
           />
-        </div>
+        </motion.div>
       </div>
+
+      <h3 style={{ marginBottom: "2rem" }}>
+        You Can Also Directly Contact Me At rishavsarkar04@gmail.com Or Using
+        Above Form
+      </h3>
     </Element>
   );
 }

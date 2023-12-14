@@ -2,24 +2,10 @@ import { motion } from "framer-motion";
 import { boxAnimate } from "../animtionVariants/aboutAnimation";
 import { headerAnimate } from "../animtionVariants/aboutAnimation";
 import { Element } from "react-scroll";
-
+import aboutAnimation from "../animationloffiees/aboutAnimation.json";
 import { frontendlist, backendlist, langlist } from "../data/data";
-
-const div_container = {
-  display: "flex",
-  justifyContent: "flex-start",
-  alignItems: "center",
-};
-
-const icon_span = {
-  marginRight: "0.8rem",
-  fontSize: "2rem",
-};
-
-const label_span = {
-  fontSize: "1.5rem",
-  fontWeight: "500",
-};
+import Lottie from "lottie-react";
+import SkillContainer from "../ui/skillContainer";
 
 export default function About() {
   return (
@@ -43,16 +29,28 @@ export default function About() {
           viewport={{ once: true }}
           className="container_content"
         >
-          Hello, I'm a Passionate <b>Full Stack Developer </b>based in Kolkata.
-          with expertise in <b>front-end</b> and <b>back-end technologies</b>.
-          Proficient in creating robust, scalable web applications. Experienced
-          in working with diverse tech stacks, including{" "}
-          <b>JavaScript, React, Node.js, Python, Django, Flask </b>
-          and more. Committed to delivering innovative solutions and staying
-          updated with the latest industry trends. with the knowledge. I'm open
-          to Job opportunities where I can contribute, learn and grow. If you
-          have a good opportunity that matches my skills and experience then
-          don't hesitate to contact me. <b>Let's build the future together!.</b>
+          <div>
+            <Lottie
+              animationData={aboutAnimation}
+              style={{
+                height: "20rem",
+                width: "40rem",
+              }}
+              loop={true}
+            />
+          </div>
+          <p>
+            Hello, I'm a Passionate <b>Full Stack Developer </b>based in
+            Kolkata. with expertise in <b>front-end</b> and{" "}
+            <b>back-end technologies</b>. Proficient in creating robust,
+            scalable web applications. Experienced in working with diverse tech
+            stacks, including{" "}
+            <b>JavaScript, React, Node.js, Python, Django, Flask </b>
+            and more. Committed to delivering innovative solutions and staying
+            updated with the latest industry trends. with the knowledge. I'm
+            open to Job opportunities where I can contribute, learn and grow.
+            <b>Let's build the future together!.</b>
+          </p>
         </motion.div>
       </div>
       <div className="skill">
@@ -76,23 +74,7 @@ export default function About() {
           <div className="skill_lang_header">Languages</div>
           <div className="skill_lang_lists">
             {langlist.map((obj, ind) => {
-              return (
-                <div
-                  className={`skill_lang_lists_${ind}`}
-                  style={div_container}
-                  key={obj.id}
-                >
-                  <span
-                    style={{
-                      marginRight: "0.8rem",
-                      fontSize: "2rem",
-                    }}
-                  >
-                    {obj.icon}
-                  </span>
-                  <span style={label_span}>{obj.label}</span>
-                </div>
-              );
+              return <SkillContainer obj={obj} ind={ind} key={obj.id} />;
             })}
           </div>
         </motion.div>
@@ -106,16 +88,7 @@ export default function About() {
           <div className="skill_front_header">Frontend Skills</div>
           <div className="skill_front_lists">
             {frontendlist.map((obj, ind) => {
-              return (
-                <div
-                  className={`skill_front_lists_${ind}`}
-                  style={div_container}
-                  key={obj.id}
-                >
-                  <span style={icon_span}>{obj.icon}</span>
-                  <span style={label_span}>{obj.label}</span>
-                </div>
-              );
+              return <SkillContainer obj={obj} ind={ind} key={obj.id} />;
             })}
             <div className="skill_front_lists....."></div>
           </div>
@@ -130,16 +103,7 @@ export default function About() {
           <div className="skill_back_header">Backend Skills</div>
           <div className="skill_back_lists">
             {backendlist.map((obj, ind) => {
-              return (
-                <div
-                  className={`skill_back_lists_${ind}`}
-                  style={div_container}
-                  key={obj.id}
-                >
-                  <span style={icon_span}>{obj.icon}</span>
-                  <span style={label_span}>{obj.label}</span>
-                </div>
-              );
+              return <SkillContainer obj={obj} ind={ind} key={obj.id} />;
             })}
           </div>
         </motion.div>
