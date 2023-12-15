@@ -86,7 +86,7 @@ export const projects = [
     desc: "",
     site_url: "",
     github_url: "",
-    img: "",
+    img: "/img/img1.jpg",
   },
   {
     id: 2,
@@ -95,7 +95,7 @@ export const projects = [
     desc: "",
     site_url: "",
     github_url: "",
-    img: "",
+    img: "/img/img1.jpg",
   },
 
   {
@@ -105,7 +105,7 @@ export const projects = [
     desc: "",
     site_url: "",
     github_url: "",
-    img: "",
+    img: "/img/img1.jpg",
   },
   {
     id: 4,
@@ -114,7 +114,7 @@ export const projects = [
     desc: "",
     site_url: "",
     github_url: "",
-    img: "",
+    img: "/img/img1.jpg",
   },
 
   {
@@ -124,7 +124,7 @@ export const projects = [
     desc: "",
     site_url: "",
     github_url: "",
-    img: "",
+    img: "/img/img1.jpg",
   },
 
   {
@@ -134,7 +134,7 @@ export const projects = [
     desc: "",
     site_url: "",
     github_url: "",
-    img: "",
+    img: "/img/img1.jpg",
   },
 
   {
@@ -144,6 +144,6 @@ export const projects = [
     desc: "",
     site_url: "",
     github_url: "",
-    img: "",
+    img: "/img/img1.jpg",
   },
 ];

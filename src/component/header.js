@@ -7,7 +7,9 @@ import { TypeAnimation } from "react-type-animation";
 import { CgScrollV } from "react-icons/cg";
 import { motion } from "framer-motion";
 import { Element, Link } from "react-scroll";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+// import { LazyLoadImage } from "react-lazy-load-image-component";
+// import "react-lazy-load-image-component/src/effects/blur.css";
+
 import cv from "../cv/cv.pdf";
 import {
   picAnimation,
@@ -127,12 +129,14 @@ export default function Header() {
           animate="animate"
           className="header_right_image"
         >
-          <LazyLoadImage
+          {/* <LazyLoadImage
             alt="default.jpg"
             effect="blur"
+            height=" 100%"
+            width="100% "
             src="/img/header_img.jpg"
-          />
-          {/* <img src="/img/header_img.jpg" alt="default.jpg"></img> */}
+          /> */}
+          <img src="/img/header_img.jpg" alt="default.jpg"></img>
         </motion.div>
         <div className="scolldown">
           <CgScrollV />

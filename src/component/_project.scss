@@ -52,6 +52,12 @@
   background-color: rgb(251, 252, 253);
   transition: all 0.2s linear;
   cursor: pointer;
+  overflow: hidden;
+
+  & > span > img {
+    height: 100%;
+    width: 100%;
+  }
 
   &:hover {
     scale: 1.04;

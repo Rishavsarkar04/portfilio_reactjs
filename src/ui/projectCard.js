@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+// import "react-lazy-load-image-component/src/effects/blur.css";
 import { MdArrowOutward } from "react-icons/md";
 
 export default function Projectcard({ proj, scale }) {
@@ -12,6 +14,8 @@ export default function Projectcard({ proj, scale }) {
       key={proj.id}
     >
       <img src="/img/img1.jpg" alt="/img/img1.jpg"></img>
+      {/* <LazyLoadImage src={proj.img} effect="blur" alt="Project image" /> */}
+
       <div className="project_card_container">
         <div className="project_card_container_header">{proj.name}</div>
         <div className="project_card_container_desc">{proj.desc}</div>
