@@ -10,7 +10,7 @@ import {
   mailimageAnimation,
 } from "../animtionVariants/contactAnimation";
 
-export default function Contact() {
+export default function Contact({ setActiveTab }) {
   return (
     <Element className="contact">
       <motion.div

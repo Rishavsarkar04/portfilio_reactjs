@@ -8,6 +8,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { headerAnimate } from "../animtionVariants/aboutAnimation";
 import { dict } from "../data/data";
+import { useInView } from "react-hook-inview";
 
 const highlight = {
   scale: "1.1",
@@ -15,11 +16,20 @@ const highlight = {
   background: "white",
 };
 
-export default function Experience() {
+export default function Experience({ setActiveTab }) {
   const [state, setstate] = useState("education");
+  const [ref, isVisible] = useInView({
+    root: null,
+    threshold: 1,
+    unobserveOnEnter: false,
+    onEnter: (enter, observer) => {
+      setActiveTab("experience");
+      console.log("enter", enter, observer);
+    },
+  });
   return (
-    <Element className="experience" name="experience">
-      <motion.div
+    <div className="experience" name="experience">
+      <motion.Element
         variants={headerAnimate}
         initial="initial"
         whileInView="animate"
@@ -28,7 +38,7 @@ export default function Experience() {
         className="experience_header"
       >
         My Experience
-      </motion.div>
+      </motion.Element>
       <div className="experience_tab">
         <div
           className="education"
@@ -61,6 +71,6 @@ export default function Experience() {
           )}
         </VerticalTimeline>
       </div>
-    </Element>
+    </div>
   );
 }

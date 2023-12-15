@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaHome } from "react-icons/fa";
 import { MdContactPage } from "react-icons/md";
@@ -10,12 +9,9 @@ import { navAnimation } from "../animtionVariants/navAnimation";
 import { Link } from "react-scroll";
 import { tabs } from "../data/data";
 
-export default function Navbar() {
-  let [activeTab, setActiveTab] = useState("home");
-
+export default function Navbar({ activeTab, setActiveTab }) {
   return (
     <div className="nav">
-      {/* <div className="nav_logo">logo</div> */}
       <div className="nav_links">
         <ul>
           {tabs.map((tab, ind) => {
@@ -36,9 +32,9 @@ export default function Navbar() {
                   // offset={-10}
                   duration={500}
                   onClick={() => setActiveTab(tab.id)}
-                  onSetActive={() => {
-                    setActiveTab(tab.id);
-                  }}
+                  // onSetActive={() => {
+                  //   setActiveTab(tab.id);
+                  // }}
                 >
                   {tab.id === "home" && <FaHome />}
                   {tab.id === "about" && <MdContactPage />}

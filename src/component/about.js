@@ -7,7 +7,7 @@ import { frontendlist, backendlist, langlist } from "../data/data";
 import Lottie from "lottie-react";
 import SkillContainer from "../ui/skillContainer";
 
-export default function About() {
+export default function About({ setActiveTab }) {
   return (
     <Element className="about" name="about">
       <div className="container">

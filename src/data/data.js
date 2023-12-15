@@ -1,18 +1,5 @@
-import { SiDjango } from "react-icons/si";
-import { IoLogoJavascript } from "react-icons/io5";
-import { FaReact } from "react-icons/fa6";
-import { TbBrandRedux } from "react-icons/tb";
-import { SiReactquery } from "react-icons/si";
-import { FaHtml5 } from "react-icons/fa6";
-import { FaSass } from "react-icons/fa";
-import { FaCss3Alt } from "react-icons/fa";
-import { FaNodeJs } from "react-icons/fa6";
-import { SiFlask } from "react-icons/si";
-import { TbBrandMysql } from "react-icons/tb";
-import { SiMongodb } from "react-icons/si";
-import { FaPython } from "react-icons/fa";
-import { SiExpress } from "react-icons/si";
 import { SiMicrosoftacademic } from "react-icons/si";
+import { Icon } from "@iconify/react";
 
 export const tabs = [
   { id: "home", label: "Home", key: 1 },
@@ -22,24 +9,44 @@ export const tabs = [
   { id: "contact", label: "Contact", key: 5 },
 ];
 export const frontendlist = [
-  { id: "react", label: "React", icon: <FaReact /> },
-  { id: "redux", label: "Redux", icon: <TbBrandRedux /> },
-  { id: "reactquery", label: "React qurey", icon: <SiReactquery /> },
-  { id: "html", label: "Html", icon: <FaHtml5 /> },
-  { id: "css", label: "Css", icon: <FaCss3Alt /> },
-  { id: "sass", label: "Sass", icon: <FaSass /> },
+  { id: "react", label: "React", icon: <Icon icon="skill-icons:react-dark" /> },
+  { id: "redux", label: "Redux", icon: <Icon icon="skill-icons:redux" /> },
+  {
+    id: "reactquery",
+    label: "React qurey",
+    icon: <Icon icon="logos:react-query-icon" />,
+  },
+  {
+    id: "html",
+    label: "Html",
+    icon: <Icon icon="vscode-icons:file-type-html" />,
+  },
+  { id: "css", label: "Css", icon: <Icon icon="vscode-icons:file-type-css" /> },
+  { id: "sass", label: "Sass", icon: <Icon icon="skill-icons:sass" /> },
 ];
 export const backendlist = [
-  { id: "django", label: "Django", icon: <SiDjango /> },
-  { id: "nodejs", label: "Node js", icon: <FaNodeJs /> },
-  { id: "express", label: "Express js", icon: <SiExpress /> },
-  { id: "flask", label: "Flask", icon: <SiFlask /> },
-  { id: "mysql", label: "Mysql", icon: <TbBrandMysql /> },
-  { id: "mongoDb", label: "MongoDb", icon: <SiMongodb /> },
+  { id: "django", label: "Django", icon: <Icon icon="skill-icons:django" /> },
+  { id: "nodejs", label: "Node js", icon: <Icon icon="devicon:nodejs" /> },
+  {
+    id: "express",
+    label: "Express js",
+    icon: <Icon icon="skill-icons:expressjs-dark" />,
+  },
+  { id: "flask", label: "Flask", icon: <Icon icon="devicon:flask" /> },
+  { id: "mysql", label: "Mysql", icon: <Icon icon="devicon:mysql" /> },
+  {
+    id: "mongoDb",
+    label: "MongoDb",
+    icon: <Icon icon="skill-icons:mongodb" />,
+  },
 ];
 export const langlist = [
-  { id: "python", label: "Python", icon: <FaPython /> },
-  { id: "javascript", label: "Javascript", icon: <IoLogoJavascript /> },
+  { id: "python", label: "Python", icon: <Icon icon="logos:python" /> },
+  {
+    id: "javascript",
+    label: "Javascript",
+    icon: <Icon icon="vscode-icons:file-type-js-official" />,
+  },
 ];
 
 export const dict = {

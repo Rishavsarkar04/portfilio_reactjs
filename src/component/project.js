@@ -9,7 +9,7 @@ import Projectcard from "../ui/projectCard";
 
 export default function Project() {
   const ref = useRef(null);
-  const [Limit, setLimit] = useState(8);
+  const [Limit, setLimit] = useState(4);
   const len = projects.length;
   // console.log(len);
   const project = projects.slice(0, Limit);
