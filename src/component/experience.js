@@ -18,59 +18,61 @@ const highlight = {
 
 export default function Experience({ setActiveTab }) {
   const [state, setstate] = useState("education");
-  const [ref, isVisible] = useInView({
+  const [ref] = useInView({
     root: null,
-    threshold: 1,
+    threshold: 0.6,
     unobserveOnEnter: false,
     onEnter: (enter, observer) => {
       setActiveTab("experience");
-      console.log("enter", enter, observer);
     },
   });
+
   return (
-    <div className="experience" name="experience">
-      <motion.Element
-        variants={headerAnimate}
-        initial="initial"
-        whileInView="animate"
-        custom={0}
-        viewport={{ once: true }}
-        className="experience_header"
-      >
-        My Experience
-      </motion.Element>
-      <div className="experience_tab">
-        <div
-          className="education"
-          style={state === "education" ? highlight : {}}
-          onClick={() => {
-            setstate("education");
-          }}
+    <div className="experienceRef" ref={ref}>
+      <Element className="experience" name="experience">
+        <motion.div
+          variants={headerAnimate}
+          initial="initial"
+          whileInView="animate"
+          custom={0}
+          viewport={{ once: true }}
+          className="experience_header"
         >
-          <HiOutlineAcademicCap />
-          Education
+          My Experience
+        </motion.div>
+        <div className="experience_tab">
+          <div
+            className="education"
+            style={state === "education" ? highlight : {}}
+            onClick={() => {
+              setstate("education");
+            }}
+          >
+            <HiOutlineAcademicCap />
+            Education
+          </div>
+          <div
+            className="job"
+            style={state === "job" ? highlight : {}}
+            onClick={() => {
+              setstate("job");
+            }}
+          >
+            <PiSuitcaseSimpleBold /> Job Experience
+          </div>
         </div>
-        <div
-          className="job"
-          style={state === "job" ? highlight : {}}
-          onClick={() => {
-            setstate("job");
-          }}
-        >
-          <PiSuitcaseSimpleBold /> Job Experience
+        <div className="experience_timeline">
+          <VerticalTimeline lineColor={dict[state].length > 0 ? "black" : ""}>
+            {dict[state].length > 0 ? (
+              dict[state].map((obj) => {
+                return <TimelineElement data={obj} key={obj.id} />;
+              })
+            ) : (
+              <h1 style={{ textAlign: "center" }}>No experience</h1>
+            )}
+          </VerticalTimeline>
         </div>
-      </div>
-      <div className="experience_timeline">
-        <VerticalTimeline lineColor={dict[state].length > 0 ? "black" : ""}>
-          {dict[state].length > 0 ? (
-            dict[state].map((obj) => {
-              return <TimelineElement data={obj} key={obj.id} />;
-            })
-          ) : (
-            <h1 style={{ textAlign: "center" }}>No experience</h1>
-          )}
-        </VerticalTimeline>
-      </div>
+      </Element>
     </div>
   );
 }
