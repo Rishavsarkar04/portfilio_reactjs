@@ -1,15 +1,13 @@
-import { FaFacebook } from "react-icons/fa";
-import { ImGithub } from "react-icons/im";
-import { BsLinkedin } from "react-icons/bs";
 import { FaPaperPlane } from "react-icons/fa";
-import { FaFileAlt } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
+import { FaDownload } from "react-icons/fa6";
 import { CgScrollV } from "react-icons/cg";
 import { motion } from "framer-motion";
 import { Element, Link } from "react-scroll";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import cv from "../cv/cv.pdf";
+import { Icon } from "@iconify/react";
 import {
   picAnimation,
   socialMediaAnimation,
@@ -17,6 +15,7 @@ import {
   contentAnimation,
 } from "../animtionVariants/headerAnimation";
 import { useInView } from "react-hook-inview";
+import DarkmodeBtn from "../ui/darkmodeButton";
 
 export default function Header({ setActiveTab }) {
   const [ref] = useInView({
@@ -111,7 +110,7 @@ export default function Header({ setActiveTab }) {
               className="header_left_buttons_cv"
             >
               <a href={cv} download="Rishav Resume">
-                Download CV <FaFileAlt />
+                Download CV <FaDownload />
               </a>
             </motion.div>
           </div>
@@ -122,13 +121,19 @@ export default function Header({ setActiveTab }) {
             className="social_media"
           >
             <li className="social_media_facebook">
-              <FaFacebook />
+              <a href="https://www.facebook.com/rishav.sarkar.186">
+                <Icon icon="devicon:facebook" />
+              </a>
             </li>
             <li className="social_media_github">
-              <ImGithub />
+              <a href="https://github.com/Rishavsarkar04">
+                <Icon icon="icon-park:github" />
+              </a>
             </li>
             <li className="social_media_linkedin">
-              <BsLinkedin />
+              <a href="https://www.linkedin.com/in/rishav-sarkar-383b27245/">
+                <Icon icon="devicon:linkedin" />
+              </a>
             </li>
           </motion.ul>
         </div>
@@ -151,6 +156,9 @@ export default function Header({ setActiveTab }) {
           <div className="scolldown">
             <CgScrollV />
           </div>
+        </div>
+        <div style={{ position: "absolute", top: "-2rem", right: "4rem" }}>
+          <DarkmodeBtn />
         </div>
       </Element>
     </div>
