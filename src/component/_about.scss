@@ -26,6 +26,7 @@
     background-color: transparent;
     width: 80%;
     // padding: 2rem 8rem 2rem 8rem;
+    color: var(--text-color);
     margin-bottom: 2rem;
     filter: opacity(20px);
     // border: 0.1rem solid black;
@@ -67,7 +68,7 @@
     left: 47%;
     font-size: 3rem;
     font-weight: 600;
-    -webkit-text-stroke: 2px black;
+    -webkit-text-stroke: 2px var(--name-stroke);
     color: var(--name-color);
   }
 

@@ -17,7 +17,7 @@ import {
 import { useInView } from "react-hook-inview";
 import DarkmodeBtn from "../ui/darkmodeButton";
 
-export default function Header({ setActiveTab }) {
+export default function Header({ setActiveTab, mode, setmode }) {
   const [ref] = useInView({
     root: null,
     threshold: 0.6,
@@ -95,7 +95,8 @@ export default function Header({ setActiveTab }) {
                 to="contact"
                 spy={true}
                 smooth={true}
-                duration={500}
+                delay={500}
+                duration={1000}
               >
                 Contact Me <FaPaperPlane />
               </Link>
@@ -158,7 +159,7 @@ export default function Header({ setActiveTab }) {
           </div>
         </div>
         <div style={{ position: "absolute", top: "-2rem", right: "4rem" }}>
-          <DarkmodeBtn />
+          <DarkmodeBtn mode={mode} setmode={setmode} />
         </div>
       </Element>
     </div>

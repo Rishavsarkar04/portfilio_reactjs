@@ -11,7 +11,7 @@ import {
 } from "../animtionVariants/contactAnimation";
 import { useInView } from "react-hook-inview";
 
-export default function Contact({ setActiveTab }) {
+export default function Contact({ setActiveTab, mode }) {
   const [ref] = useInView({
     root: null,
     threshold: 0.6,
@@ -97,7 +97,7 @@ export default function Contact({ setActiveTab }) {
           </motion.div>
         </div>
 
-        <h3 style={{ marginBottom: "2rem" }}>
+        <h3 className="contact_info">
           You Can Also Directly Contact Me At rishavsarkar04@gmail.com Or Using
           Above Form
         </h3>

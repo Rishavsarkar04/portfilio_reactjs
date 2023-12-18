@@ -30,12 +30,20 @@ export default function Projectcard({ proj, scale }) {
           })}
         </ul>
         <div className="buttons">
-          <button className="project_links">
-            Visit Site <MdArrowOutward />
-          </button>
-          <button className="github_link">
-            Github <MdArrowOutward />
-          </button>
+          {proj.site_url && (
+            <button className="project_links">
+              <a href={proj.site_url}>
+                Visit Site <MdArrowOutward />
+              </a>
+            </button>
+          )}
+          {proj.github_url && (
+            <button className="github_link">
+              <a href={proj.github_url}>
+                Github <MdArrowOutward />
+              </a>
+            </button>
+          )}
         </div>
       </div>
     </motion.div>

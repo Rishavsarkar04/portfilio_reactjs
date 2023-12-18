@@ -1,6 +1,6 @@
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 
-export default function TimelineElement({ data }) {
+export default function TimelineElement({ data, mode }) {
   return (
     <VerticalTimelineElement
       contentStyle={{
@@ -12,17 +12,19 @@ export default function TimelineElement({ data }) {
         borderRadius: "5px",
       }}
       contentArrowStyle={{
-        borderRight: "7px solid black",
+        borderRight:
+          mode === "dark" ? "7px solid  var(--text-color)" : "7px solid black",
       }}
       date={data.year}
       iconStyle={{
-        background: "rgba(246, 242, 242,1)",
-        color: "black",
+        background: mode === "light" ? "rgba(246, 242, 242,1)" : "#270442",
+        color: mode === "light" ? "black" : "var(--text-color)",
         height: "45%",
         width: "6%",
         borderColor: "black",
         // marginLeft: "-16px",
-        boxShadow: "0 0 0 4px black",
+        boxShadow:
+          mode === "light" ? "0 0 0 4px black" : "0 0 0 4px  var(--text-color)",
       }}
       icon={data.icon}
     >

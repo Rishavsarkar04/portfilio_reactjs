@@ -33,9 +33,10 @@
     }
 
     &_container {
-      background-color: aliceblue;
-      border: 2px solid black;
+      background-color: var(--contact-form-bg);
+      border: 2px solid var(--border);
       border-radius: 2rem;
+      box-shadow: -1px 1px 8px 0px var(--shadow);
 
       & > form {
         display: flex;
@@ -51,6 +52,7 @@
           font-size: 3rem;
           font-weight: bold;
           font-style: italic;
+          color: var(--text-color);
         }
 
         & > .name {
@@ -100,5 +102,10 @@
         }
       }
     }
+  }
+
+  .contact_info {
+    margin-bottom: 2rem;
+    color: var(--text-color);
   }
 }

@@ -1,10 +1,12 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { FaRegMoon } from "react-icons/fa6";
 import { FiSun } from "react-icons/fi";
 import { motion } from "framer-motion";
 
-export default function DarkmodeBtn() {
-  const [mode, setmode] = useState("light");
+export default function DarkmodeBtn({ mode, setmode }) {
+  useEffect(() => {
+    localStorage.setItem("mode", `${mode}`);
+  }, [mode]);
 
   useEffect(() => {
     if (mode === "dark") {

@@ -22,11 +22,52 @@
 
     rgba(238, 238, 238, 0.14898459383753504) 95%
   );
+  --border: black;
+  --border2: black;
+  --text-color: black;
   --button-bg-color: rgb(61, 59, 59);
   --shadow: #808080;
   --shadow2: rgba(0, 0, 0, 0.2);
   --name-color: aliceblue;
+  --name-stroke: rgb(0, 0, 0);
   --role-color: rgb(74, 142, 232);
+  --role-stroke: rgb(0, 0, 0);
+  --box-bg: rgb(252, 249, 249);
+  --contact-form-bg: aliceblue;
+  --card-button: linear-gradient(
+    56deg,
+    rgba(11, 123, 181, 1) 20%,
+    rgba(58, 147, 236, 0.9220938375350141) 72%
+  );
+  --bg2: white;
+}
+
+.darkmode {
+  --main-bg-color: linear-gradient(
+    142deg,
+    rgba(67, 9, 75, 0.9164915966386554) 16%,
+    rgba(39, 4, 66, 1) 40%,
+    rgba(17, 2, 29, 1) 93%
+  );
+  --secondary-bg-color: linear-gradient(
+    94deg,
+    rgba(49, 6, 55, 1) 10%,
+    rgba(39, 4, 66, 1) 40%,
+    rgba(17, 2, 29, 1) 93%
+  );
+  --name-color: rgb(55, 6, 95);
+  --name-stroke: rgb(240, 207, 238);
+  --text-color: rgb(242, 236, 244);
+  --role-stroke: rgb(35, 2, 33);
+  --border: rgb(87, 3, 104);
+  --border2: rgb(212, 149, 224);
+  --shadow: #c155e0b8;
+  --shadow2: rgba(212, 129, 233, 0.642);
+  --button-bg-color: rgb(101, 8, 126);
+  --box-bg: rgba(91, 7, 99, 0.216);
+  --contact-form-bg: rgba(91, 7, 99, 0.216);
+  --card-button: rgb(101, 8, 126);
+  --bg2: rgb(234, 194, 248);
 }
 
 html {

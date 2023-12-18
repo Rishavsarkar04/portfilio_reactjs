@@ -11,7 +11,7 @@ import { useInView } from "react-hook-inview";
 export default function Project({ setActiveTab }) {
   const ref = useRef(null);
 
-  const [Limit, setLimit] = useState(8);
+  const [Limit, setLimit] = useState(5);
 
   const len = projects.length;
   const project = projects.slice(0, Limit);

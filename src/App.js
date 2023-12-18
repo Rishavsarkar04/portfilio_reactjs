@@ -10,12 +10,15 @@ import { useState } from "react";
 
 function App() {
   let [activeTab, setActiveTab] = useState("home");
+  const [mode, setmode] = useState(() => {
+    return localStorage.getItem("mode") || "light";
+  });
   return (
     <div style={{ background: "var(--secondary-bg-color)" }}>
       <Navbar activeTab={activeTab} setActiveTab={setActiveTab} />
-      <Header setActiveTab={setActiveTab} />
+      <Header setActiveTab={setActiveTab} mode={mode} setmode={setmode} />
       <About setActiveTab={setActiveTab} />
-      <Experience setActiveTab={setActiveTab} />
+      <Experience setActiveTab={setActiveTab} mode={mode} />
       <Project setActiveTab={setActiveTab} />
       <Contact setActiveTab={setActiveTab} />
       <Footer />

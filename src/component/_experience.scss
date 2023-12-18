@@ -28,6 +28,7 @@
       align-items: center;
       column-gap: 0.5rem;
       padding: 0.5rem;
+      color: var(--text-color);
       cursor: pointer;
       transition: all 0.1s linear;
     }
@@ -46,5 +47,8 @@
   }
   .vertical-timeline-element {
     position: relative;
+  }
+  .vertical-timeline-element-date {
+    color: var(--text-color);
   }
 }

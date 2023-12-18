@@ -12,11 +12,12 @@ import { useInView } from "react-hook-inview";
 
 const highlight = {
   scale: "1.1",
-  border: " 1px solid black",
-  background: "white",
+  border: " 1px solid var( --border2)",
+  color: "var(--text-color)",
+  backgroundColor: "var(--box-bg)",
 };
 
-export default function Experience({ setActiveTab }) {
+export default function Experience({ setActiveTab, mode }) {
   const [state, setstate] = useState("education");
   const [ref] = useInView({
     root: null,
@@ -27,6 +28,7 @@ export default function Experience({ setActiveTab }) {
     },
   });
 
+  console.log(mode);
   return (
     <div className="experienceRef" ref={ref}>
       <Element className="experience" name="experience">
@@ -62,13 +64,23 @@ export default function Experience({ setActiveTab }) {
           </div>
         </div>
         <div className="experience_timeline">
-          <VerticalTimeline lineColor={dict[state].length > 0 ? "black" : ""}>
+          <VerticalTimeline
+            lineColor={
+              dict[state].length > 0
+                ? mode === "light"
+                  ? "black"
+                  : "rgb(242, 236, 244)"
+                : ""
+            }
+          >
             {dict[state].length > 0 ? (
               dict[state].map((obj) => {
-                return <TimelineElement data={obj} key={obj.id} />;
+                return <TimelineElement data={obj} key={obj.id} mode={mode} />;
               })
             ) : (
-              <h1 style={{ textAlign: "center" }}>No experience</h1>
+              <h1 style={{ textAlign: "center", color: "var(--text-color)" }}>
+                No experience
+              </h1>
             )}
           </VerticalTimeline>
         </div>

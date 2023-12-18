@@ -7,7 +7,7 @@
   width: 85rem;
   // backdrop-filter: blur(50px);
   box-shadow: 1px 1px 17px -1px var(--shadow);
-  background-color: white;
+  background-color: var(--bg2);
   // background: transparent;
   padding: 0.5rem;
   -webkit-border-radius: 153px;
@@ -47,9 +47,9 @@
         transition: all 0.2s ease-in-out;
         cursor: pointer;
       }
-      & > li > a:hover {
-        color: rgb(42, 41, 41);
-      }
+      // & > li > a:hover {
+      //   color: rgb(42, 41, 41);
+      // }
     }
   }
 }

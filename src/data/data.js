@@ -92,7 +92,7 @@ export const projects = [
     techs: ["Python", "Django", "Msql", "Javascript", "Html", "Css"],
     desc: "",
     site_url: "",
-    github_url: "",
+    github_url: "https://github.com/Rishavsarkar04/e-commerce_django",
     img: "/img/img1.jpg",
   },
   {
@@ -100,8 +100,8 @@ export const projects = [
     name: "Portfolio Website",
     techs: ["React", "Javascript", "Html", "Css", "Sass", "Framer Motion"],
     desc: "",
-    site_url: "",
-    github_url: "",
+    site_url: "https://rishavsarkar.vercel.app/",
+    github_url: "https://github.com/Rishavsarkar04/portfilio_reactjs",
     img: "/img/img1.jpg",
   },
 
@@ -111,7 +111,8 @@ export const projects = [
     techs: ["Python", "Django", "Django Chanels", "Javascript", "Html", "Css"],
     desc: "",
     site_url: "",
-    github_url: "",
+    github_url:
+      "https://github.com/Rishavsarkar04/chat_application_django_channels",
     img: "/img/img1.jpg",
   },
   {
@@ -120,7 +121,8 @@ export const projects = [
     techs: ["Python", "Django", "Mysql", "Javascript", "Html", "Css"],
     desc: "",
     site_url: "",
-    github_url: "",
+    github_url:
+      "https://github.com/Rishavsarkar04/jwt_authentication_django_rest_framework",
     img: "/img/img1.jpg",
   },
 
@@ -130,17 +132,17 @@ export const projects = [
     techs: ["React", "React-Router", "Context-Api", "Javascript", "Css"],
     desc: "",
     site_url: "",
-    github_url: "",
+    github_url: "https://github.com/Rishavsarkar04/todo_reactjs",
     img: "/img/img1.jpg",
   },
 
   {
     id: 6,
-    name: "Bloging Site",
+    name: "Blogging Site",
     techs: ["Python", "Flask", "Mysql", "Javascript", "Html", "Css"],
     desc: "",
     site_url: "",
-    github_url: "",
+    github_url: "https://github.com/Rishavsarkar04/blog_flask",
     img: "/img/img1.jpg",
   },
 
@@ -150,7 +152,8 @@ export const projects = [
     techs: ["Python", "Keras"],
     desc: "",
     site_url: "",
-    github_url: "",
+    github_url:
+      "https://github.com/Rishavsarkar04/medicinal-flower-recognitation-model",
     img: "/img/img1.jpg",
   },
 ];

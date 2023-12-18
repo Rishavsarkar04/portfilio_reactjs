@@ -20,6 +20,7 @@
     gap: 2rem;
     justify-content: center;
     grid-auto-rows: (10rem, auto);
+    color: var(--text-color);
     // margin: 3rem 0 4rem 0;
 
     // border: 2px solid black;
@@ -28,7 +29,7 @@
   &_loadmore {
     border-radius: 2rem;
     background-color: var(--button-bg-color);
-    color: white;
+    color: var(--text-color);
     width: 12rem;
     height: 2.5rem;
     font-size: 1.2rem;
@@ -48,7 +49,7 @@
   // padding: 2rem;
   box-shadow: -1px 1px 8px 0px var(--shadow);
   border-radius: 2rem;
-  background-color: rgb(251, 252, 253);
+  background-color: var(--box-bg);
   transition: all 0.2s linear;
   cursor: pointer;
   overflow: hidden;
@@ -120,17 +121,18 @@
   }
 
   & .buttons > button {
-    background: linear-gradient(
-      56deg,
-      rgba(11, 123, 181, 1) 20%,
-      rgba(58, 147, 236, 0.9220938375350141) 72%
-    );
+    background: var(--card-button);
     font-size: 1.2rem;
-    color: aliceblue;
-    border: 0.2rem solid black;
+
+    border: 0.2rem solid var(--borde2);
     border-radius: 0.4rem;
     padding: 0.5rem 1rem;
     margin: 0 1rem;
     cursor: pointer;
+
+    & > a {
+      color: aliceblue;
+      text-decoration: none;
+    }
   }
 }

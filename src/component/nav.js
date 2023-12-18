@@ -30,6 +30,7 @@ export default function Navbar({ activeTab, setActiveTab }) {
                   spy={true}
                   smooth={true}
                   // offset={-10}
+                  delay={100}
                   duration={500}
                   onClick={() => setActiveTab(tab.id)}
                   // onSetActive={() => {
