@@ -138,8 +138,13 @@ export default function Contact({ setActiveTab, mode }) {
                 type="submit"
                 disabled={loading}
               >
-                {loading ? "SENDING....." : "SEND"}
-                {loading ? "" : <FaPaperPlane />}
+                {loading ? (
+                  "SENDING....."
+                ) : (
+                  <>
+                    SEND <FaPaperPlane />
+                  </>
+                )}
               </motion.button>
             </motion.form>
           </motion.div>
