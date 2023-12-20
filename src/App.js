@@ -7,6 +7,7 @@ import Project from "./component/project";
 import Contact from "./component/contact";
 import Footer from "./component/footer";
 import { useState } from "react";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   let [activeTab, setActiveTab] = useState("home");
@@ -22,8 +23,21 @@ function App() {
       <Project setActiveTab={setActiveTab} />
       <Contact setActiveTab={setActiveTab} />
       <Footer />
+
+      <Toaster
+        position="top-center"
+        gutter={8}
+        toastOptions={{
+          // Default options for specific types
+          success: {
+            duration: 3000,
+          },
+          error: {
+            duration: 3000,
+          },
+        }}
+      />
     </div>
   );
 }
-
 export default App;

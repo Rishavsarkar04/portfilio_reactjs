@@ -28,7 +28,6 @@ export default function Experience({ setActiveTab, mode }) {
     },
   });
 
-  console.log(mode);
   return (
     <div className="experienceRef" ref={ref}>
       <Element className="experience" name="experience">

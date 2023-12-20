@@ -10,8 +10,14 @@ import {
   mailimageAnimation,
 } from "../animtionVariants/contactAnimation";
 import { useInView } from "react-hook-inview";
+import { useForm } from "react-hook-form";
+import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
+import { useState } from "react";
 
 export default function Contact({ setActiveTab, mode }) {
+  const [loading, setLoading] = useState(false);
+
   const [ref] = useInView({
     root: null,
     threshold: 0.6,
@@ -20,6 +26,37 @@ export default function Contact({ setActiveTab, mode }) {
       setActiveTab("contact");
     },
   });
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
+
+  const onSubmit = async (data) => {
+    try {
+      setLoading(true);
+      const res = await emailjs.send(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        data,
+        process.env.REACT_APP_EMAIL_PUBLIC_KEY
+      );
+      console.log(res);
+      reset();
+      if (res.status !== 200) {
+        throw new Error("Email Is Not Sent");
+      }
+
+      toast.success("Email is sent Successfully");
+    } catch (error) {
+      console.log(error);
+      toast.error(error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <div className="contactRef" ref={ref}>
@@ -49,20 +86,46 @@ export default function Contact({ setActiveTab, mode }) {
               whileInView="animate"
               viewport={{ once: true }}
               custom={1}
+              onSubmit={handleSubmit(onSubmit)}
             >
               <div className="form_header"> Let's Build Future Together !</div>
               <div className="name">
-                <input type="text" placeholder="Enter Your Name" />
+                <input
+                  type="text"
+                  placeholder="Enter Your Name"
+                  {...register("name", { required: "Name is Required" })}
+                />
+                <p className="error">{errors.name?.message}</p>
               </div>
               <div className="email">
-                <input type="email" placeholder="Enter Your Email" />
+                <input
+                  type="email"
+                  placeholder="Enter Your Email"
+                  {...register("email", {
+                    required: "Email is Required",
+                    pattern: {
+                      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                      message: "Invalid Email Address",
+                    },
+                  })}
+                />
+                <p className="error">{errors.email?.message}</p>
               </div>
               <div className="subject">
-                <input type="text" placeholder="Subject" />
+                <input
+                  type="text"
+                  placeholder="Subject"
+                  {...register("subject", { required: "Subject is Required" })}
+                />
+                <p className="error">{errors.subject?.message}</p>
               </div>
 
               <div className="message">
-                <textarea placeholder="Enter Your Message Here...."></textarea>
+                <textarea
+                  placeholder="Enter Your Message Here...."
+                  {...register("message", { required: "Message is Required" })}
+                ></textarea>
+                <p className="error"> {errors.message?.message}</p>
               </div>
 
               <motion.button
@@ -73,9 +136,10 @@ export default function Contact({ setActiveTab, mode }) {
                 whileTap="tap"
                 className="submit"
                 type="submit"
+                disabled={loading}
               >
-                Send
-                <FaPaperPlane />
+                {loading ? "SENDING....." : "SEND"}
+                {loading ? "" : <FaPaperPlane />}
               </motion.button>
             </motion.form>
           </motion.div>
