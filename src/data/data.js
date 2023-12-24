@@ -66,7 +66,7 @@ export const dict = {
       year: "2017-2020",
       location: "Kolkata, West Bengal",
       level: "Bachelor of Science (B.sc)",
-      institute: "Gurudas college",
+      institute: "Gurudas College",
       description:
         "I have done my graduation degree in Economics(honours) from Gurudas College Which is under Calcutta University. where I studied Economics, Math, Statistics .",
       icon: <SiMicrosoftacademic />,
@@ -89,7 +89,7 @@ export const projects = [
   {
     id: 1,
     name: "Ecomerce Site",
-    techs: ["Python", "Django", "Msql", "Javascript", "Html", "Css"],
+    techs: ["Python", "Django", "Mysql", "Javascript", "Html", "Css"],
     desc: "",
     site_url: "",
     github_url: "https://github.com/Rishavsarkar04/e-commerce_django",

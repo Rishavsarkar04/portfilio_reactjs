@@ -19,16 +19,40 @@
       margin-left: 17rem;
       color: var(--text-color);
 
+      @media only screen and (max-width: 768px) {
+        margin-left: 12rem;
+      }
+
       &_header {
         font-size: x-large;
         font-weight: 600;
         margin-bottom: 3rem;
+        @media only screen and (max-width: 1440px) {
+          font-size: 2rem;
+        }
+        @media only screen and (max-width: 1024px) {
+          font-size: 1.8rem;
+        }
+
+        @media only screen and (max-width: 768px) {
+          font-size: 1.5rem;
+        }
       }
 
       &_subheader {
         font-size: 2.3rem;
         font-weight: 500;
         margin-bottom: 2rem;
+        @media only screen and (max-width: 1440px) {
+          font-size: 2rem;
+        }
+        @media only screen and (max-width: 1024px) {
+          font-size: 1.8rem;
+        }
+
+        @media only screen and (max-width: 768px) {
+          font-size: 1.5rem;
+        }
       }
       &_content {
         word-spacing: 0.5rem;
@@ -37,6 +61,17 @@
         width: 90%;
         position: relative;
         top: 1rem;
+        @media only screen and (max-width: 1440px) {
+          font-size: 1.6rem;
+        }
+
+        @media only screen and (max-width: 1024px) {
+          font-size: 1.4rem;
+        }
+
+        @media only screen and (max-width: 768px) {
+          font-size: 1.2rem;
+        }
       }
     }
 
@@ -49,6 +84,15 @@
       column-gap: 6rem;
       position: relative;
       bottom: 2rem;
+
+      @media only screen and (max-width: 1440px) {
+        top: 4rem;
+      }
+      @media only screen and (max-width: 1024px) {
+        height: 3rem;
+        left: 1rem;
+        column-gap: 4rem;
+      }
 
       &_contact {
         border-radius: 2rem;
@@ -66,9 +110,24 @@
         -ms-user-select: none; /* IE 10 and IE 11 */
         user-select: none;
 
+        @media only screen and (max-width: 1024px) {
+          font-size: 1rem;
+        }
+
+        @media only screen and (max-width: 768px) {
+          font-size: 0.9rem;
+        }
+
         & svg {
           font-size: 1.2rem;
           margin-left: 0.5rem;
+          @media only screen and (max-width: 1024px) {
+            font-size: 1rem;
+          }
+
+          @media only screen and (max-width: 768px) {
+            font-size: 0.9rem;
+          }
         }
       }
 
@@ -90,11 +149,26 @@
         & > a {
           text-decoration: none;
           color: white;
+
+          @media only screen and (max-width: 1024px) {
+            font-size: 1rem;
+          }
+
+          @media only screen and (max-width: 768px) {
+            font-size: 0.9rem;
+          }
         }
 
         & svg {
           font-size: 1.2rem;
           margin-left: 0.5rem;
+          @media only screen and (max-width: 1024px) {
+            font-size: 1rem;
+          }
+
+          @media only screen and (max-width: 768px) {
+            font-size: 0.9rem;
+          }
         }
       }
     }
@@ -116,6 +190,18 @@
       -webkit-user-select: none; /* Safari */
       -ms-user-select: none; /* IE 10 and IE 11 */
       user-select: none;
+
+      @media only screen and (max-width: 1440px) {
+        margin-top: 3rem;
+        width: 28.5rem;
+        height: 33.6rem;
+      }
+
+      @media only screen and (max-width: 768px) {
+        margin-top: 3rem;
+        width: 22.5rem;
+        height: 26.6rem;
+      }
 
       & img {
         object-fit: contain;
@@ -146,6 +232,16 @@
     font-weight: 900;
     -webkit-text-stroke: 2px var(--name-stroke);
     color: var(--name-color);
+    @media only screen and (max-width: 1440px) {
+      font-size: 4rem;
+    }
+
+    @media only screen and (max-width: 1024px) {
+      font-size: 3.7rem;
+    }
+    @media only screen and (max-width: 768px) {
+      font-size: 3.4rem;
+    }
   }
 
   .myrole {
@@ -153,6 +249,19 @@
     font-weight: 600;
     -webkit-text-stroke: 1px var(--role-stroke);
     color: var(--role-color);
+    @media only screen and (max-width: 1440px) {
+      margin-top: 3rem;
+      width: 28.5rem;
+      height: 33.6rem;
+      font-size: 2.5rem;
+    }
+
+    @media only screen and (max-width: 1024px) {
+      font-size: 2.3rem;
+    }
+    @media only screen and (max-width: 768px) {
+      font-size: 2rem;
+    }
   }
 
   .social_media {
@@ -176,21 +285,34 @@
       flex-grow: 1;
       scale: (1.2);
       transition: all 0.3s linear;
+
+      @media only screen and (max-width: 1024px) {
+        font-size: 2rem;
+      }
     }
 
     &_facebook:hover {
       scale: (1.6);
-      // color: rgba(35, 35, 229, 0.818);
+
+      @media only screen and (max-width: 1024px) {
+        scale: (1.3);
+      }
     }
 
     &_linkedin:hover {
       scale: (1.6);
-      // color: rgba(9, 9, 230, 0.818);
+
+      @media only screen and (max-width: 1024px) {
+        scale: (1.3);
+      }
     }
 
     &_github:hover {
       scale: (1.6);
-      // color: rgba(12, 12, 12, 0.815);
+
+      @media only screen and (max-width: 1024px) {
+        scale: (1.3);
+      }
     }
   }
 }
@@ -204,12 +326,26 @@
   animation: scrolldown 5s ease-in-out infinite;
   color: var(--text-color);
 
+  @media only screen and (max-width: 1024px) {
+    font-size: 2rem;
+    left: -12rem;
+  }
+
+  @media only screen and (max-width: 768px) {
+    font-size: 1.7rem;
+    left: -7rem;
+  }
+
   &::before {
     content: "Scroll down";
     position: absolute;
     font-size: 1rem;
     top: -3rem;
     font-weight: 800;
+    @media only screen and (max-width: 768px) {
+      font-size: 0.7rem;
+      top: -2rem;
+    }
   }
 
   @keyframes scrolldown {

@@ -5,10 +5,8 @@
   z-index: 11;
   height: 5rem;
   width: 85rem;
-  // backdrop-filter: blur(50px);
   box-shadow: 1px 1px 17px -1px var(--shadow);
   background-color: var(--bg2);
-  // background: transparent;
   padding: 0.5rem;
   -webkit-border-radius: 153px;
   -moz-border-radius: 153px;
@@ -16,11 +14,19 @@
   display: flex;
   justify-content: space-around;
 
-  &_logo {
-    font-size: 2.5rem;
-    font-weight: bolder;
-    color: var(--main-bg-color);
-    // margin-right:auto ;
+  @media only screen and (max-width: 1440px) {
+    // height: 4.5rem;
+    // width: 70rem;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    height: 3.5rem;
+    width: 50rem;
+    left: 25%;
+  }
+
+  @media only screen and (max-width: 768px) {
+    left: 18%;
   }
 
   &_links {
@@ -36,6 +42,15 @@
       font-size: 1.6rem;
       font-weight: 600;
       column-gap: 6rem;
+      @media only screen and (max-width: 1440px) {
+        column-gap: 5rem;
+        font-size: 1.4rem;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        column-gap: 4rem;
+        font-size: 1rem;
+      }
 
       & > li > a {
         position: relative;
@@ -72,6 +87,5 @@
   background-color: black;
 }
 
-// .nav_active {
-//   scale: (1.2);
-// }
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// media query

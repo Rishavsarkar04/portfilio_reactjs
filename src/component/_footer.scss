@@ -11,6 +11,9 @@
   &_copyright {
     font-size: 1.3rem;
     font-weight: 600;
+    @media only screen and (max-width: 1024px) {
+      font-size: 1rem;
+    }
   }
 
   &_navs > ul {
@@ -20,6 +23,10 @@
     column-gap: 5rem;
     font-size: 1.5rem;
     font-weight: 600;
+    @media only screen and (max-width: 1024px) {
+      column-gap: 4.5rem;
+      font-size: 1.3rem;
+    }
 
     & > li {
       // margin-top: 2rem;

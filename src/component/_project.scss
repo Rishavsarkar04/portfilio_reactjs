@@ -16,15 +16,19 @@
   &_container {
     width: 70%;
     display: grid;
-    grid-template-columns: 25rem 25rem 25rem 25rem;
+    grid-template-columns: repeat(4, 25rem);
     gap: 2rem;
     justify-content: center;
     grid-auto-rows: (10rem, auto);
     color: var(--text-color);
-    // margin: 3rem 0 4rem 0;
 
-    // border: 2px solid black;
-    // padding: 4rem;
+    @media only screen and (max-width: 1024px) {
+      grid-template-columns: repeat(4, 20rem);
+    }
+
+    @media only screen and (max-width: 768px) {
+      grid-template-columns: repeat(3, 20rem);
+    }
   }
   &_loadmore {
     border-radius: 2rem;
@@ -78,11 +82,18 @@
     row-gap: 1rem;
     padding: 1rem;
     margin-bottom: 1rem;
+    @media only screen and (max-width: 1024px) {
+      row-gap: 0.8rem;
+      margin-bottom: 0.8rem;
+    }
 
     &_header {
       font-size: 1.7rem;
       font-weight: 800;
-      // min-height: 3rem;
+
+      @media only screen and (max-width: 1024px) {
+        font-size: 1.5rem;
+      }
     }
 
     &_desc {
@@ -101,14 +112,21 @@
       flex-wrap: wrap;
       font-size: 1.2rem;
       margin-bottom: 1rem;
+      @media only screen and (max-width: 1024px) {
+        column-gap: 0.8rem;
+        row-gap: 1rem;
+      }
 
       & > li {
         font-size: 1rem;
-        //   border: 1px solid rgb(19, 17, 17);
+
         padding: 0.3rem 1rem 0.3rem 1rem;
         background-color: rgb(71, 68, 68);
         color: rgb(255, 255, 255);
         border-radius: 1.5rem;
+        @media only screen and (max-width: 1024px) {
+          font-size: 0.9rem;
+        }
       }
     }
   }
@@ -118,6 +136,9 @@
     height: 12rem;
     object-fit: cover;
     border-radius: 2rem 2rem 0 0;
+    @media only screen and (max-width: 1024px) {
+      height: 10rem;
+    }
   }
 
   & .buttons > button {
@@ -129,6 +150,9 @@
     padding: 0.5rem 1rem;
     margin: 0 1rem;
     cursor: pointer;
+    @media only screen and (max-width: 1024px) {
+      font-size: 1rem;
+    }
 
     & > a {
       color: aliceblue;

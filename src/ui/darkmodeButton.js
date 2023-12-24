@@ -34,16 +34,17 @@ export default function DarkmodeBtn({ mode, setmode }) {
           <motion.span
             layoutId="btn"
             style={{
-              position: "absolute",
-              width: "135%",
-              height: "100%",
-              top: "0rem",
-              right: "0rem",
-              zIndex: "-1",
+              // position: "absolute",
+              // width: "135%",
+              // height: "100%",
+              // top: "0rem",
+              // right: "0rem",
+              // zIndex: "-1",
               backgroundColor: "yellow",
-              border: "0.1rem solid black",
-              borderRadius: " 50%",
+              // border: "0.1rem solid black",
+              // borderRadius: " 50%",
             }}
+            className="light_pill"
           ></motion.span>
         )}
       </motion.div>
@@ -65,15 +66,15 @@ export default function DarkmodeBtn({ mode, setmode }) {
           <motion.span
             layoutId="btn"
             style={{
-              position: "absolute",
-              width: "135%",
-              height: "100%",
-              top: "0rem",
-              left: "0rem",
-              zIndex: "1",
+              // position: "absolute",
+              // width: "135%",
+              // height: "100%",
+              // top: "0rem",
+              // left: "0rem",
+              // zIndex: "1",
               backgroundColor: "black",
-              borderRadius: " 50%",
-              mixBlendMode: "exclusion",
+              // borderRadius: " 50%",
+              // mixBlendMode: "exclusion",
             }}
             className="dark_pill"
           ></motion.span>
