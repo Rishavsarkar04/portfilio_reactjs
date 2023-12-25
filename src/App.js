@@ -12,7 +12,7 @@ import { Toaster } from "react-hot-toast";
 function App() {
   let [activeTab, setActiveTab] = useState("home");
   const [mode, setmode] = useState(() => {
-    return localStorage.getItem("mode") || "light";
+    return localStorage.getItem("mode") || "dark";
   });
   return (
     <div style={{ background: "var(--secondary-bg-color)" }}>

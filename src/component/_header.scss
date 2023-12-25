@@ -4,6 +4,11 @@
   position: relative;
   background: var(--main-bg-color);
 
+  @media only screen and (max-width: 430px) {
+    min-height: 100vh;
+    flex-direction: column-reverse;
+  }
+
   &_left {
     height: 100%;
     display: flex;
@@ -11,6 +16,9 @@
     justify-content: center;
     align-items: center;
     width: 60%;
+    @media only screen and (max-width: 430px) {
+      width: 100%;
+    }
 
     &_container {
       width: 70%;
@@ -21,6 +29,18 @@
 
       @media only screen and (max-width: 768px) {
         margin-left: 12rem;
+      }
+      @media only screen and (max-width: 430px) {
+        padding: 0;
+        margin: 0;
+      }
+      @media only screen and (max-width: 430px) {
+        position: relative;
+        left: 2.5rem;
+        bottom: 1rem;
+      }
+      @media only screen and (max-width: 380px) {
+        bottom: 4rem;
       }
 
       &_header {
@@ -37,6 +57,10 @@
         @media only screen and (max-width: 768px) {
           font-size: 1.5rem;
         }
+        @media only screen and (max-width: 430px) {
+          font-size: 1.4rem;
+          margin-bottom: 0.5rem;
+        }
       }
 
       &_subheader {
@@ -52,6 +76,10 @@
 
         @media only screen and (max-width: 768px) {
           font-size: 1.5rem;
+        }
+        @media only screen and (max-width: 430px) {
+          font-size: 1.4rem;
+          margin-bottom: 0.5rem;
         }
       }
       &_content {
@@ -71,6 +99,9 @@
 
         @media only screen and (max-width: 768px) {
           font-size: 1.2rem;
+        }
+        @media only screen and (max-width: 430px) {
+          font-size: 1.1rem;
         }
       }
     }
@@ -92,6 +123,16 @@
         height: 3rem;
         left: 1rem;
         column-gap: 4rem;
+      }
+      @media only screen and (max-width: 430px) {
+        position: relative;
+        left: -0.3rem;
+        top: 2rem;
+      }
+
+      @media only screen and (max-width: 380px) {
+        min-width: 65%;
+        top: -1rem;
       }
 
       &_contact {
@@ -199,8 +240,22 @@
 
       @media only screen and (max-width: 768px) {
         margin-top: 3rem;
-        width: 22.5rem;
+        width: 22.8rem;
         height: 26.6rem;
+      }
+
+      @media only screen and (max-width: 430px) {
+        width: 18.5rem;
+        height: 19.9rem;
+        position: relative;
+        left: 12.5rem;
+        top: 2.5rem;
+      }
+
+      @media only screen and (max-width: 380px) {
+        width: 16.5rem;
+        height: 17.7rem;
+        margin-top: 1rem;
       }
 
       & img {
@@ -242,6 +297,9 @@
     @media only screen and (max-width: 768px) {
       font-size: 3.4rem;
     }
+    @media only screen and (max-width: 430px) {
+      font-size: 3rem;
+    }
   }
 
   .myrole {
@@ -262,6 +320,9 @@
     @media only screen and (max-width: 768px) {
       font-size: 2rem;
     }
+    @media only screen and (max-width: 430px) {
+      font-size: 1.9rem;
+    }
   }
 
   .social_media {
@@ -273,6 +334,11 @@
     flex-direction: column;
     row-gap: 3rem;
     list-style: none;
+    @media only screen and (max-width: 430px) {
+      row-gap: 1rem;
+      top: 20%;
+      left: 1rem;
+    }
 
     &_facebook,
     &_linkedin,
@@ -334,6 +400,10 @@
   @media only screen and (max-width: 768px) {
     font-size: 1.7rem;
     left: -7rem;
+  }
+
+  @media only screen and (max-width: 430px) {
+    display: none;
   }
 
   &::before {

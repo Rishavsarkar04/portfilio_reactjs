@@ -8,6 +8,9 @@
   flex-direction: column;
   row-gap: 2rem;
   position: relative;
+  @media only screen and (max-width: 450px) {
+    row-gap: 1.55rem;
+  }
 
   &_header {
     @include ex.section_header;
@@ -19,7 +22,10 @@
     column-gap: 7rem;
     margin-top: 4rem;
     margin-left: 4rem;
-
+    @media only screen and (max-width: 450px) {
+      column-gap: 3.5rem;
+      margin-top: 2.5rem;
+    }
     & > div {
       font-size: 2rem;
       font-weight: 600;
@@ -34,6 +40,9 @@
       @media only screen and (max-width: 1440px) {
         font-size: 1.7rem;
       }
+      @media only screen and (max-width: 450px) {
+        font-size: 1.4rem;
+      }
     }
   }
 
@@ -41,6 +50,10 @@
     width: 80%;
     padding: 2rem;
     margin-bottom: 2rem;
+    @media only screen and (max-width: 450px) {
+      padding: 0;
+      margin-top: 1rem;
+    }
   }
 
   .vertical-timeline-element-content .vertical-timeline-element-date {
@@ -61,6 +74,10 @@
       position: absolute !important;
       left: -0.3rem !important;
     }
+    @media only screen and (max-width: 450px) {
+      height: 29% !important;
+      width: 13% !important;
+    }
   }
   .vertical-timeline-element-content {
     @media only screen and (max-width: 1440px) {
@@ -74,11 +91,39 @@
       height: 12rem;
       width: 50rem;
     }
+
+    @media only screen and (max-width: 450px) {
+      height: 13rem;
+      width: 25rem;
+      padding: 1rem !important;
+    }
+    & > h2 {
+      @media only screen and (max-width: 450px) {
+        font-size: 1.3rem;
+      }
+    }
+    & > h4 {
+      @media only screen and (max-width: 450px) {
+        font-size: 1rem;
+      }
+    }
+    & > p {
+      @media only screen and (max-width: 450px) {
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
+    }
   }
   .vertical-timeline-element {
     position: relative;
   }
   .vertical-timeline-element-date {
     color: var(--text-color);
+  }
+  .experience_timeline {
+    @media only screen and (max-width: 450px) {
+      position: relative;
+      right: 0.5rem;
+    }
   }
 }
