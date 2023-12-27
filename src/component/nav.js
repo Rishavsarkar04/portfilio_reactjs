@@ -48,7 +48,7 @@ export default function Navbar({ activeTab, setActiveTab }) {
             animate="animate"
             exit="exit"
           >
-            <div className="nav_links">
+            <div className="nav_links sidenavlink">
               <ul>
                 {tabs.map((tab, ind) => {
                   return (
