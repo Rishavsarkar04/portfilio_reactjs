@@ -98,6 +98,7 @@
 }
 .sidenav {
   display: none;
+
   @media only screen and (max-width: 450px) {
     position: fixed;
     box-shadow: 1px 1px 17px -1px var(--shadow);
