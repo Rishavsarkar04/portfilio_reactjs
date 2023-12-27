@@ -18,7 +18,7 @@ import { useState } from "react";
 import { useMediaQuery } from "@react-hook/media-query";
 
 export default function Navbar({ activeTab, setActiveTab }) {
-  const matches = useMediaQuery("only screen and (max-width: 500px)");
+  const matches = useMediaQuery("only screen and (min-width: 500px)");
 
   const [active, setactive] = useState(false);
   return (
@@ -48,7 +48,7 @@ export default function Navbar({ activeTab, setActiveTab }) {
             animate="animate"
             exit="exit"
           >
-            <div className="nav_links sidenavlink">
+            <div className="nav_links">
               <ul>
                 {tabs.map((tab, ind) => {
                   return (
