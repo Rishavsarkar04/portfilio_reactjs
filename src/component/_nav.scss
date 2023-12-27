@@ -20,13 +20,17 @@
   }
 
   @media only screen and (max-width: 1024px) {
-    height: 3.5rem;
+    height: 4rem;
     width: 50rem;
     left: 25%;
   }
 
   @media only screen and (max-width: 768px) {
     left: 18%;
+  }
+
+  @media only screen and (max-width: 450px) {
+    display: none;
   }
 
   &_links {
@@ -50,6 +54,12 @@
       @media only screen and (max-width: 1024px) {
         column-gap: 4rem;
         font-size: 1rem;
+      }
+
+      @media only screen and (max-width: 450px) {
+        font-size: 1.5rem;
+        row-gap: 3.5rem;
+        flex-direction: column;
       }
 
       & > li > a {
@@ -86,6 +96,54 @@
   width: 110%;
   background-color: black;
 }
-
+.sidenav {
+  display: none;
+  @media only screen and (max-width: 450px) {
+    position: fixed;
+    box-shadow: 1px 1px 17px -1px var(--shadow);
+    background-color: var(--bg2);
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1;
+    height: 30rem;
+    width: 30rem;
+    border-radius: 30px;
+    border: solid black;
+  }
+}
+.burger {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  height: 3.5rem;
+  width: 3.5rem;
+  color: black;
+  z-index: 11;
+  border-radius: 50%;
+  border: 2px solid black;
+  background-color: var(--bg2);
+  display: none;
+  @media only screen and (max-width: 450px) {
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & > span {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      & > svg {
+        height: 70%;
+        width: 70%;
+      }
+    }
+  }
+}
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 /// media query

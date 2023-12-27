@@ -7,14 +7,17 @@ import { frontendlist, backendlist, langlist } from "../data/data";
 import Lottie from "lottie-react";
 import SkillContainer from "../ui/skillContainer";
 import { useInView } from "react-hook-inview";
+import { useMediaQuery } from "@react-hook/media-query";
 
 export default function About({ setActiveTab }) {
+  const matches = useMediaQuery("only screen and (max-width: 450px)");
   const [ref] = useInView({
     root: null,
-    threshold: 0.6,
+    threshold: matches ? 0.2 : 0.6,
     unobserveOnEnter: false,
     onEnter: (enter, observer) => {
       setActiveTab("about");
+      console.log("about enter");
     },
   });
 
