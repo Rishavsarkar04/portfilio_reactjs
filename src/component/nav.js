@@ -15,11 +15,8 @@ import { tabs } from "../data/data";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseSharp } from "react-icons/io5";
 import { useState } from "react";
-import { useMediaQuery } from "@react-hook/media-query";
 
 export default function Navbar({ activeTab, setActiveTab }) {
-  const matches = useMediaQuery("only screen and (min-width: 500px)");
-
   const [active, setactive] = useState(false);
   return (
     <>
