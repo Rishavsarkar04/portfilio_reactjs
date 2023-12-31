@@ -59,7 +59,7 @@
   .vertical-timeline-element-content .vertical-timeline-element-date {
     font-size: 1rem;
     font-weight: 800;
-    @media only screen and (max-width: 1024px) {
+    @media only screen and (max-width: 1170px) {
       color: black;
     }
     @media only screen and (max-width: 768px) {
@@ -81,9 +81,9 @@
   }
   .vertical-timeline-element-content {
     @media only screen and (max-width: 1440px) {
-      height: 10rem;
+      height: 11rem;
     }
-    @media only screen and (max-width: 1024px) {
+    @media only screen and (max-width: 1064px) {
       height: 12rem;
     }
 

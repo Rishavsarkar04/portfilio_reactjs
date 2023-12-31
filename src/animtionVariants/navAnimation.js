@@ -32,7 +32,7 @@ export const sidenavAnimation = {
       height: "30rem",
       width: "30rem",
       transition: {
-        duration: 0.5,
+        duration: 0.3,
         ease: "linear",
       },
     };
@@ -44,7 +44,7 @@ export const sidenavAnimation = {
     height: 0,
     width: 0,
     transition: {
-      delay: 0.5,
+      delay: 0.3,
       duration: 0.5,
     },
   },

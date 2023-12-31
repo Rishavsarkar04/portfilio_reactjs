@@ -1,7 +1,8 @@
 .nav {
   position: fixed;
-  top: 1rem;
-  left: 23%;
+  inset: 1rem 0 0 0;
+  margin-left: auto;
+  margin-right: auto;
   z-index: 11;
   height: 5rem;
   width: 85rem;
@@ -15,21 +16,21 @@
   justify-content: space-around;
 
   @media only screen and (max-width: 1440px) {
-    // height: 4.5rem;
-    // width: 70rem;
+    height: 4.5rem;
+    width: 80rem;
   }
 
   @media only screen and (max-width: 1024px) {
     height: 4rem;
     width: 50rem;
-    left: 25%;
   }
 
   @media only screen and (max-width: 768px) {
-    left: 18%;
+    height: 3.5rem;
+    width: 50rem;
   }
 
-  @media only screen and (max-width: 450px) {
+  @media only screen and (max-width: 670px) {
     display: none;
   }
 
@@ -56,7 +57,7 @@
         font-size: 1rem;
       }
 
-      @media only screen and (max-width: 450px) {
+      @media only screen and (max-width: 670px) {
         font-size: 1.5rem;
         row-gap: 3.5rem;
         flex-direction: column;
@@ -100,7 +101,7 @@
 .sidenav {
   display: none;
 
-  @media only screen and (max-width: 450px) {
+  @media only screen and (max-width: 670px) {
     position: fixed;
     box-shadow: 1px 1px 17px -1px var(--shadow);
     background-color: var(--bg2);
@@ -130,7 +131,7 @@
   border: 2px solid black;
   background-color: var(--bg2);
   display: none;
-  @media only screen and (max-width: 450px) {
+  @media only screen and (max-width: 670px) {
     display: block;
     display: flex;
     justify-content: center;

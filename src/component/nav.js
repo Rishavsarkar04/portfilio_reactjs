@@ -54,7 +54,7 @@ export default function Navbar({ activeTab, setActiveTab }) {
                       initial="initial"
                       animate="animate"
                       exit="exit"
-                      custom={ind + 1.5}
+                      custom={ind}
                       key={tab.id}
                       className={`nav_links_home_${tab.key}`}
                     >
