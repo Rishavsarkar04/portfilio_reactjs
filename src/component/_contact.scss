@@ -8,6 +8,7 @@
   justify-content: flex-start;
   align-items: center;
   row-gap: 4rem;
+  overflow-x: hidden;
 
   @media only screen and (max-width: 1024px) {
     row-gap: 3rem;
@@ -32,6 +33,11 @@
     @media only screen and (max-width: 1024px) {
       // height: 40rem;
       width: 100rem;
+    }
+    @media only screen and (max-width: 900px) {
+      height: 40rem;
+      width: 50rem;
+      column-gap: 1.5rem;
     }
 
     @media only screen and (max-width: 768px) {
@@ -58,7 +64,7 @@
         bottom: 2rem;
       }
 
-      @media only screen and (max-width: 768px) {
+      @media only screen and (max-width: 900px) {
         height: 35rem;
         width: 35rem;
       }
@@ -91,7 +97,7 @@
           row-gap: 2.5rem;
         }
 
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 900px) {
           height: 37rem;
           width: 30rem;
           row-gap: 2rem;
@@ -106,7 +112,7 @@
             font-size: 2.5rem;
           }
 
-          @media only screen and (max-width: 768px) {
+          @media only screen and (max-width: 900px) {
             font-size: 1.8rem;
           }
         }
