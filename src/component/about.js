@@ -17,7 +17,6 @@ export default function About({ setActiveTab }) {
     unobserveOnEnter: false,
     onEnter: (enter, observer) => {
       setActiveTab("about");
-      console.log("about enter");
     },
   });
 
